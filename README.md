@@ -1,50 +1,53 @@
-# Carryoo — Privacy Policy (GitHub Pages)
+# Carryoo — Privacy Policy (static HTML)
 
-Public privacy policy for the **Carryoo** mobile apps, hosted on GitHub Pages for [Google Play](https://play.google.com/console) compliance.
+**100% static HTML** for [GitHub Pages](https://pages.github.com/) and [Google Play](https://play.google.com/console) privacy policy URL.
 
-## Live URL (after deployment)
+No JavaScript. No build step on GitHub — only upload and serve HTML.
 
-Once GitHub Pages is enabled, use this URL in Play Console → **App content** → **Privacy policy**:
+## Public URLs (after Pages is enabled)
 
-**https://rudrajoshi072004-coder.github.io/Carryoo-privacy-policy/**
+| Page | URL |
+|------|-----|
+| Home | https://rudrajoshi072004-coder.github.io/Carryoo-privacy-policy/ |
+| Same policy | https://rudrajoshi072004-coder.github.io/Carryoo-privacy-policy/privacy-policy.html |
 
-## Repository
+Use either URL in **Play Console → App content → Privacy policy**.
 
-https://github.com/rudrajoshi072004-coder/Carryoo-privacy-policy
+## Deploy on GitHub
 
-## Files
+1. Push this repo to `main` (already connected to GitHub).
+2. Repo → **Settings** → **Pages** → **Source**: **GitHub Actions**.
+3. Wait for the **Deploy GitHub Pages** workflow to finish.
 
-| File | Description |
-|------|-------------|
-| [`index.html`](./index.html) | Play Store–ready public page (static HTML) |
-| [`PRIVACY_POLICY.md`](./PRIVACY_POLICY.md) | Source policy (Markdown) |
-| [`.github/workflows/pages.yml`](./.github/workflows/pages.yml) | Auto-deploy on push to `main` |
+## Files that are deployed
 
-## Enable GitHub Pages (one-time)
+| File | Role |
+|------|------|
+| `index.html` | Main static page (`lang="en"`) |
+| `privacy-policy.html` | Same content, alternate URL |
+| `.nojekyll` | Lets GitHub serve the site as plain static files |
 
-1. Open the repo on GitHub → **Settings** → **Pages**
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. Push to `main` — the workflow deploys the site automatically
+`PRIVACY_POLICY.md` and `build_index.py` are only for editing locally — **GitHub serves the HTML files directly**.
 
-## Regenerate `index.html`
+## Edit the policy
 
-After editing `PRIVACY_POLICY.md`:
+1. Change `PRIVACY_POLICY.md` (or edit `index.html` directly).
+2. If you edited Markdown, regenerate HTML locally:
 
 ```bash
 pip install markdown
 python build_index.py
-git add index.html PRIVACY_POLICY.md
-git commit -m "Update privacy policy"
-git push
 ```
 
-## Before Play Store submission
+3. Commit and push `index.html` and `privacy-policy.html`.
 
-1. Replace placeholders in `PRIVACY_POLICY.md` (`[Legal Entity Name]`, address, Grievance Officer), then run `build_index.py`
-2. Confirm the live URL loads in a mobile browser
-3. Paste the URL in Play Console
+## Play Store checklist
+
+- [ ] Replace `[Legal Entity Name]`, address, and Grievance Officer in the HTML or Markdown, then regenerate.
+- [ ] Open the live URL on your phone — page must load without login.
+- [ ] Paste URL in Play Console.
 
 ## Contact
 
-- Support: support@nashikflow.app
-- Business: business@nashikflow.app
+- support@nashikflow.app
+- business@nashikflow.app
