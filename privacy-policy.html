@@ -43,6 +43,27 @@
     .site-header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; font-weight: 700; }
     .site-header p { margin: 0; opacity: 0.92; font-size: 0.95rem; }
     .site-header .dates { margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.9; }
+    .site-header .nav { margin-top: 1rem; }
+    .site-header .nav a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .deletion-highlight {
+      margin: 0 -0.25rem 1.5rem;
+      padding: 1rem 1rem 0.25rem;
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--accent) 8%, var(--card));
+    }
+    .deletion-highlight h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+      font-size: 1.2rem;
+    }
+    .deletion-highlight h3 { color: var(--fg); }
     main { max-width: 48rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
     article {
       background: var(--card);
@@ -99,6 +120,7 @@
     <h1>Carryoo</h1>
     <p>Privacy Policy</p>
     <p class="dates">Last updated: 29 May 2026 · Effective: 29 May 2026</p>
+    <p class="nav"><a href="#account-deletion">Account &amp; data deletion (Google Play)</a></p>
   </header>
   <main>
     <article lang="en">
@@ -122,7 +144,147 @@
 <p><strong>Note for legal review:</strong> Replace bracketed placeholders such as <code>[Legal Entity Name]</code>, <code>[Registered Address]</code>, and <code>[Grievance Officer Name]</code> with your company’s official details before publication.</p>
 </blockquote>
 <hr />
-<h2>2. Who This Policy Applies To</h2>
+<section class="deletion-highlight" id="account-deletion"><h2>2. Account and data deletion (Carryoo)</h2>
+<p>This section applies to the <strong>Carryoo</strong> mobile apps listed on <strong>Google Play</strong> (customer app and driver partner app) and to our developer account <strong>Carryoo</strong> / <strong>[Legal Entity Name]</strong>. It explains how you can request deletion of your account and what happens to your data.</p>
+<h3>2.1 How to request account deletion</h3>
+<p>Follow these steps to ask us to delete your Carryoo account:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Use the <strong>same phone number or email</strong> registered on your Carryoo account.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Send an email to <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> with the subject line: <strong>“Carryoo — Account deletion request”</strong>.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>In the email, include: (a) your <strong>full name</strong>, (b) <strong>registered mobile number</strong>, (c) whether you are a <strong>customer</strong> or <strong>driver partner</strong>, and (d) a short statement that you want your <strong>account and personal data deleted</strong>.</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>If you are a <strong>driver partner</strong>, complete or cancel any <strong>active trips</strong>, <strong>go offline</strong> in the app, and settle any <strong>outstanding payouts</strong> before we can close your account.</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>We will reply to confirm receipt and may ask you to <strong>verify your identity</strong> (e.g., OTP to your registered number).</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>After verification, we process deletion within <strong>30 days</strong>, unless law requires us to keep certain records longer (see Section 2.2).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>In-app option (when available):</strong> Open the Carryoo app → <strong>Account</strong> or <strong>Profile</strong> → <strong>Settings</strong> → <strong>Delete account</strong>, and follow the prompts. If you do not see this option, use the email steps above.</p>
+<p><strong>Business / enterprise users:</strong> Contact <strong><a href="mailto:business@nashikflow.app">business@nashikflow.app</a></strong> from your corporate admin email; your organisation’s administrator may need to remove you from the business account first.</p>
+<h3>2.2 Data that is deleted</h3>
+<p>After a valid deletion request, we delete or anonymise the following from our <strong>active production systems</strong> (subject to the retention periods in Section 2.3):</p>
+<table>
+<thead>
+<tr>
+<th>Data category</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Account profile</strong></td>
+<td>Name, profile photo, email, language preferences removed or anonymised</td>
+</tr>
+<tr>
+<td><strong>Login credentials</strong></td>
+<td>Account disabled; OTP and session tokens invalidated</td>
+</tr>
+<tr>
+<td><strong>Saved addresses &amp; favourites</strong></td>
+<td>Deleted where stored for your account</td>
+</tr>
+<tr>
+<td><strong>Marketing preferences</strong></td>
+<td>Deleted; promotional messages stopped</td>
+</tr>
+<tr>
+<td><strong>Push notification tokens</strong></td>
+<td>Removed from our messaging systems</td>
+</tr>
+<tr>
+<td><strong>In-app chat</strong> (non-dispute)</td>
+<td>Deleted or anonymised where technically feasible</td>
+</tr>
+<tr>
+<td><strong>Wallet / in-app balance</strong></td>
+<td>Account closed after settlement of any balance per our terms</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3 Data that may be kept (and why)</h3>
+<p>We <strong>do not delete</strong> all records immediately. The following may be <strong>retained</strong> for the periods below for <strong>legal, tax, safety, fraud prevention, or dispute</strong> reasons:</p>
+<table>
+<thead>
+<tr>
+<th>Data category</th>
+<th>Typical retention after deletion request</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trip and order history</strong></td>
+<td><strong>5–8 years</strong> (or as required by Indian tax and transport rules)</td>
+<td>Accounting, tax, regulatory compliance</td>
+</tr>
+<tr>
+<td><strong>Payment and invoice records</strong></td>
+<td><strong>5–8 years</strong></td>
+<td>Financial and tax law</td>
+</tr>
+<tr>
+<td><strong>Driver KYC</strong> (licence, RC, insurance, PAN, bank details)</td>
+<td>As required by <strong>law and partner onboarding rules</strong> (often <strong>3–8 years</strong> after account closure)</td>
+<td>Legal obligation, transport and tax compliance</td>
+</tr>
+<tr>
+<td><strong>Location and route logs</strong> (completed trips)</td>
+<td><strong>Trip duration + up to 24 months</strong> for disputes and safety (unless law requires longer)</td>
+<td>Safety investigations, dispute resolution</td>
+</tr>
+<tr>
+<td><strong>Support tickets &amp; complaints</strong></td>
+<td><strong>Up to 3 years</strong> after case closure</td>
+<td>Customer support and legal claims</td>
+</tr>
+<tr>
+<td><strong>Fraud, abuse, and security logs</strong></td>
+<td><strong>Up to 3 years</strong> where an investigation applied</td>
+<td>Fraud prevention and network security</td>
+</tr>
+<tr>
+<td><strong>Backups</strong></td>
+<td>Removed on our <strong>backup rotation cycle</strong> (typically within <strong>90 days</strong> of deletion from live systems)</td>
+<td>Technical disaster recovery</td>
+</tr>
+</tbody>
+</table>
+<p>After the retention period ends, we <strong>delete or irreversibly anonymise</strong> the data in line with our retention schedule (see also Section 9).</p>
+<h3>2.4 Additional retention period</h3>
+<p>Beyond the periods in Section 2.3, we may keep personal data <strong>longer</strong> if:</p>
+<ul>
+<li>A <strong>court order</strong>, <strong>regulator</strong>, or <strong>law enforcement</strong> request requires it  </li>
+<li>An <strong>open dispute</strong>, <strong>chargeback</strong>, <strong>insurance claim</strong>, or <strong>safety investigation</strong> involves your account  </li>
+<li><strong>Indian law</strong> (including the DPDP Act and IT Act) mandates a specific retention period  </li>
+</ul>
+<p>We will inform you in our response to your deletion request if any of these exceptions apply to your case.</p>
+<h3>2.5 Questions about deletion</h3>
+<p>Email <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> or see <strong>Section 12</strong> (Grievance Officer) for privacy complaints.</p>
+<hr />
+</section><h2>3. Who This Policy Applies To</h2>
 <p>This Policy applies to personal data we process about:</p>
 <table>
 <thead>
@@ -155,9 +317,9 @@
 </tbody>
 </table>
 <hr />
-<h2>3. Personal Data We Collect</h2>
+<h2>4. Personal Data We Collect</h2>
 <p>We collect personal data that you provide directly, that is generated through your use of the Services, and that we receive from third parties where permitted by law.</p>
-<h3>3.1 Data You Provide</h3>
+<h3>4.1 Data You Provide</h3>
 <table>
 <thead>
 <tr>
@@ -214,7 +376,7 @@
 </tr>
 </tbody>
 </table>
-<h3>3.2 Data Collected Automatically</h3>
+<h3>4.2 Data Collected Automatically</h3>
 <table>
 <thead>
 <tr>
@@ -241,12 +403,12 @@
 </tr>
 <tr>
 <td><strong>Cookies &amp; similar technologies</strong></td>
-<td>Session tokens, preferences on web (see Section 12)</td>
+<td>Session tokens, preferences on web (see Section 13)</td>
 <td>Authentication, analytics</td>
 </tr>
 </tbody>
 </table>
-<h3>3.3 Data from Third Parties</h3>
+<h3>4.3 Data from Third Parties</h3>
 <p>We may receive information from:</p>
 <ul>
 <li><strong>Payment gateways and banks</strong> — payment status, masked card or UPI references, chargeback data  </li>
@@ -258,9 +420,9 @@
 </ul>
 <p>We do not intentionally collect sensitive personal data beyond what is necessary for lawful purposes (e.g., financial or identity verification for partners). Where required, we seek explicit consent.</p>
 <hr />
-<h2>4. How We Use Your Personal Data</h2>
+<h2>5. How We Use Your Personal Data</h2>
 <p>We use personal data for the following purposes. Where the DPDP Act requires a lawful ground, we rely on <strong>your consent</strong>, <strong>performance of a contract</strong>, <strong>legal obligation</strong>, or <strong>legitimate uses</strong> permitted under applicable law (such as fraud prevention or network security).</p>
-<h3>4.1 Core Service Delivery</h3>
+<h3>5.1 Core Service Delivery</h3>
 <ul>
 <li><strong>Account creation and authentication</strong> — registering you, verifying your phone or email, and securing your account  </li>
 <li><strong>Order matching and dispatch</strong> — connecting customers with available driver partners based on location, vehicle type, and demand  </li>
@@ -269,7 +431,7 @@
 <li><strong>Payments and settlements</strong> — processing customer payments, driver payouts, refunds, invoices, and wallet operations  </li>
 <li><strong>Real-time tracking</strong> — showing live location of vehicles during active trips to relevant parties  </li>
 </ul>
-<h3>4.2 Safety, Trust, and Compliance</h3>
+<h3>5.2 Safety, Trust, and Compliance</h3>
 <ul>
 <li>Verifying driver identity, licences, and vehicle documents  </li>
 <li>Detecting fraud, abuse, duplicate accounts, and policy violations  </li>
@@ -277,26 +439,26 @@
 <li>Complying with tax, accounting, transport, and regulatory requirements  </li>
 <li>Responding to lawful requests from courts, police, or government authorities  </li>
 </ul>
-<h3>4.3 Customer Support and Communications</h3>
+<h3>5.3 Customer Support and Communications</h3>
 <ul>
 <li>Resolving complaints, lost-item reports, and billing queries  </li>
 <li>Sending transactional messages (OTP, booking confirmation, driver assigned, delivery completed)  </li>
 <li>Sending service announcements, policy updates, and—where you have opted in—marketing offers  </li>
 </ul>
-<h3>4.4 Product Improvement and Analytics</h3>
+<h3>5.4 Product Improvement and Analytics</h3>
 <ul>
 <li>Analysing aggregated usage patterns to improve matching algorithms, pricing, and user experience  </li>
 <li>Conducting surveys and A/B tests  </li>
 <li>Debugging errors and monitoring app performance  </li>
 </ul>
-<h3>4.5 Business and Enterprise Features</h3>
+<h3>5.5 Business and Enterprise Features</h3>
 <ul>
 <li>Managing corporate accounts, central billing, usage reports, and authorised sub-users  </li>
 <li>Enforcing business-specific pricing, credit limits, and service-level terms  </li>
 </ul>
 <p>We will not use your personal data for purposes incompatible with those described above without notifying you and, where required, obtaining fresh consent.</p>
 <hr />
-<h2>5. Location Data — Specific Notice</h2>
+<h2>6. Location Data — Specific Notice</h2>
 <p>Location information is essential for a logistics platform like Carryoo.</p>
 <table>
 <thead>
@@ -325,11 +487,11 @@
 </tbody>
 </table>
 <p>You can control location permissions through your device settings. Disabling location may prevent you from booking rides, going online as a driver, or receiving accurate ETAs.</p>
-<p>We retain trip route data only as long as needed for operations, disputes, safety investigations, and legal retention periods (see Section 9).</p>
+<p>We retain trip route data only as long as needed for operations, disputes, safety investigations, and legal retention periods (see Section 9 and Section 2.3).</p>
 <hr />
-<h2>6. How We Share Personal Data</h2>
+<h2>7. How We Share Personal Data</h2>
 <p>We do not sell your personal data. We share it only as described below.</p>
-<h3>6.1 Between Platform Users (Service-Necessary Sharing)</h3>
+<h3>7.1 Between Platform Users (Service-Necessary Sharing)</h3>
 <table>
 <thead>
 <tr>
@@ -356,7 +518,7 @@
 </tr>
 </tbody>
 </table>
-<h3>6.2 Service Providers and Processors</h3>
+<h3>7.2 Service Providers and Processors</h3>
 <p>We engage trusted third parties who process data on our instructions, including:</p>
 <table>
 <thead>
@@ -397,9 +559,9 @@
 </tbody>
 </table>
 <p>These parties are contractually required to protect your data and use it only for the services they provide to us.</p>
-<h3>6.3 Business Partners and Affiliates</h3>
+<h3>7.3 Business Partners and Affiliates</h3>
 <p>Where you use Carryoo Business or promotional programmes, we may share limited data with the corporate account owner or programme partners as disclosed at sign-up.</p>
-<h3>6.4 Legal and Safety Disclosures</h3>
+<h3>7.4 Legal and Safety Disclosures</h3>
 <p>We may disclose personal data when we believe in good faith that disclosure is necessary to:</p>
 <ul>
 <li>Comply with applicable law, regulation, legal process, or governmental request  </li>
@@ -407,15 +569,15 @@
 <li>Protect the rights, property, or safety of Carryoo, our users, or the public  </li>
 <li>Detect, prevent, or address fraud, security, or technical issues  </li>
 </ul>
-<h3>6.5 Business Transfers</h3>
+<h3>7.5 Business Transfers</h3>
 <p>If we are involved in a merger, acquisition, or sale of assets, your personal data may be transferred as part of that transaction, subject to confidentiality and continued protection consistent with this Policy.</p>
-<h3>6.6 Aggregated and De-Identified Data</h3>
+<h3>7.6 Aggregated and De-Identified Data</h3>
 <p>We may share statistics that do not identify individuals (e.g., average delivery times in our service areas) for research, marketing, or industry reports.</p>
 <hr />
-<h2>7. International Data Transfers</h2>
+<h2>8. International Data Transfers</h2>
 <p>Our primary systems are located in India. Some service providers may process data on servers outside India. Where personal data is transferred internationally, we implement appropriate safeguards as required under the DPDP Act and applicable rules, such as contractual clauses and assessments of recipient jurisdictions.</p>
 <hr />
-<h2>8. Data Retention</h2>
+<h2>9. Data Retention</h2>
 <p>We retain personal data only for as long as necessary to fulfil the purposes in this Policy, unless a longer period is required or permitted by law.</p>
 <table>
 <thead>
@@ -453,7 +615,7 @@
 </table>
 <p>When retention ends, we delete or irreversibly anonymise data in accordance with our data retention schedule.</p>
 <hr />
-<h2>9. Security Measures</h2>
+<h2>10. Security Measures</h2>
 <p>We implement administrative, technical, and organisational measures designed to protect personal data, including:</p>
 <ul>
 <li>Encryption in transit (TLS/HTTPS) and encryption at rest where appropriate  </li>
@@ -464,7 +626,7 @@
 </ul>
 <p>No method of transmission or storage is completely secure. You are responsible for safeguarding your device, OTPs, and account credentials. Report suspected unauthorised access immediately to <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong>.</p>
 <hr />
-<h2>10. Your Rights and Choices</h2>
+<h2>11. Your Rights and Choices</h2>
 <p>Under the DPDP Act and our practices, you may have the following rights in relation to your personal data (subject to applicable exceptions):</p>
 <table>
 <thead>
@@ -498,7 +660,7 @@
 <tr>
 <td><strong>Right to grievance redressal</strong></td>
 <td>Raise concerns with our Grievance Officer</td>
-<td>See Section 11</td>
+<td>See Section 12</td>
 </tr>
 <tr>
 <td><strong>Nomination</strong></td>
@@ -507,14 +669,15 @@
 </tr>
 </tbody>
 </table>
-<h3>10.1 Account Deletion</h3>
-<p>You may request account deletion through the app (where supported) or by emailing <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> from your registered email or phone. We will verify your identity before processing. Deletion may be delayed where we must retain records for legal, tax, or dispute resolution purposes.</p>
-<h3>10.2 Marketing Opt-Out</h3>
+<h3>11.1 Account deletion</h3>
+<p>For full steps, data deleted or kept, and retention periods required by Google Play, see <strong>Section 2 (Account and data deletion)</strong> above.</p>
+<p>You may also request deletion by emailing <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> from your registered email or phone. We will verify your identity before processing.</p>
+<h3>11.2 Marketing Opt-Out</h3>
 <p>You may opt out of promotional SMS, email, or push notifications via message instructions or app settings. Transactional messages related to active bookings cannot be fully opted out while you use the Services.</p>
-<h3>10.3 Driver Partners</h3>
+<h3>11.3 Driver Partners</h3>
 <p>Drivers who wish to stop processing must go offline, close their partner account, and settle outstanding payouts. Certain records (trips, tax, KYC) may still be retained as required by law.</p>
 <hr />
-<h2>11. Grievance Officer and Contact</h2>
+<h2>12. Grievance Officer and Contact</h2>
 <p>In accordance with applicable Indian law, you may contact our Grievance Officer for privacy-related complaints:</p>
 <table>
 <thead>
@@ -552,7 +715,7 @@
 </table>
 <p>If you are not satisfied with our response, you may have the right to approach the <strong>Data Protection Board of India</strong> under the DPDP Act once fully operational.</p>
 <hr />
-<h2>12. Cookies and Similar Technologies (Web)</h2>
+<h2>13. Cookies and Similar Technologies (Web)</h2>
 <p>When you use our website or web-based admin tools, we and our partners may use cookies, pixels, and local storage to:</p>
 <ul>
 <li>Keep you signed in  </li>
@@ -561,16 +724,16 @@
 </ul>
 <p>You can control cookies through your browser settings. Disabling essential cookies may affect functionality.</p>
 <hr />
-<h2>13. Children’s Privacy</h2>
+<h2>14. Children’s Privacy</h2>
 <p>The Platform is not intended for individuals under <strong>18 years</strong> of age. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> and we will take steps to delete it.</p>
 <hr />
-<h2>14. Third-Party Links and SDKs</h2>
+<h2>15. Third-Party Links and SDKs</h2>
 <p>The Platform may contain links to third-party websites or integrate third-party SDKs (maps, payments, analytics). Their privacy practices are governed by their own policies. We encourage you to review those policies before providing them information.</p>
 <hr />
-<h2>15. Changes to This Policy</h2>
+<h2>16. Changes to This Policy</h2>
 <p>We may update this Policy from time to time to reflect changes in law, technology, or our Services. We will post the revised Policy with an updated “Last updated” date and, where required, notify you through the app, email, or SMS. Continued use after the effective date constitutes acceptance of the revised Policy, to the extent permitted by law.</p>
 <hr />
-<h2>16. Definitions</h2>
+<h2>17. Definitions</h2>
 <table>
 <thead>
 <tr>
@@ -598,7 +761,7 @@
 </tbody>
 </table>
 <hr />
-<h2>17. Summary Table — Data Uses at a Glance</h2>
+<h2>18. Summary Table — Data Uses at a Glance</h2>
 <table>
 <thead>
 <tr>

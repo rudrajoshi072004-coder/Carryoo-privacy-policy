@@ -25,7 +25,74 @@ By registering for, accessing, or using the Platform, you acknowledge that you h
 
 ---
 
-## 2. Who This Policy Applies To
+## 2. Account and data deletion (Carryoo)
+
+This section applies to the **Carryoo** mobile apps listed on **Google Play** (customer app and driver partner app) and to our developer account **Carryoo** / **[Legal Entity Name]**. It explains how you can request deletion of your account and what happens to your data.
+
+### 2.1 How to request account deletion
+
+Follow these steps to ask us to delete your Carryoo account:
+
+| Step | Action |
+|------|--------|
+| **1** | Use the **same phone number or email** registered on your Carryoo account. |
+| **2** | Send an email to **support@nashikflow.app** with the subject line: **“Carryoo — Account deletion request”**. |
+| **3** | In the email, include: (a) your **full name**, (b) **registered mobile number**, (c) whether you are a **customer** or **driver partner**, and (d) a short statement that you want your **account and personal data deleted**. |
+| **4** | If you are a **driver partner**, complete or cancel any **active trips**, **go offline** in the app, and settle any **outstanding payouts** before we can close your account. |
+| **5** | We will reply to confirm receipt and may ask you to **verify your identity** (e.g., OTP to your registered number). |
+| **6** | After verification, we process deletion within **30 days**, unless law requires us to keep certain records longer (see Section 2.2). |
+
+**In-app option (when available):** Open the Carryoo app → **Account** or **Profile** → **Settings** → **Delete account**, and follow the prompts. If you do not see this option, use the email steps above.
+
+**Business / enterprise users:** Contact **business@nashikflow.app** from your corporate admin email; your organisation’s administrator may need to remove you from the business account first.
+
+### 2.2 Data that is deleted
+
+After a valid deletion request, we delete or anonymise the following from our **active production systems** (subject to the retention periods in Section 2.3):
+
+| Data category | What happens |
+|---------------|--------------|
+| **Account profile** | Name, profile photo, email, language preferences removed or anonymised |
+| **Login credentials** | Account disabled; OTP and session tokens invalidated |
+| **Saved addresses & favourites** | Deleted where stored for your account |
+| **Marketing preferences** | Deleted; promotional messages stopped |
+| **Push notification tokens** | Removed from our messaging systems |
+| **In-app chat** (non-dispute) | Deleted or anonymised where technically feasible |
+| **Wallet / in-app balance** | Account closed after settlement of any balance per our terms |
+
+### 2.3 Data that may be kept (and why)
+
+We **do not delete** all records immediately. The following may be **retained** for the periods below for **legal, tax, safety, fraud prevention, or dispute** reasons:
+
+| Data category | Typical retention after deletion request | Reason |
+|---------------|------------------------------------------|--------|
+| **Trip and order history** | **5–8 years** (or as required by Indian tax and transport rules) | Accounting, tax, regulatory compliance |
+| **Payment and invoice records** | **5–8 years** | Financial and tax law |
+| **Driver KYC** (licence, RC, insurance, PAN, bank details) | As required by **law and partner onboarding rules** (often **3–8 years** after account closure) | Legal obligation, transport and tax compliance |
+| **Location and route logs** (completed trips) | **Trip duration + up to 24 months** for disputes and safety (unless law requires longer) | Safety investigations, dispute resolution |
+| **Support tickets & complaints** | **Up to 3 years** after case closure | Customer support and legal claims |
+| **Fraud, abuse, and security logs** | **Up to 3 years** where an investigation applied | Fraud prevention and network security |
+| **Backups** | Removed on our **backup rotation cycle** (typically within **90 days** of deletion from live systems) | Technical disaster recovery |
+
+After the retention period ends, we **delete or irreversibly anonymise** the data in line with our retention schedule (see also Section 9).
+
+### 2.4 Additional retention period
+
+Beyond the periods in Section 2.3, we may keep personal data **longer** if:
+
+- A **court order**, **regulator**, or **law enforcement** request requires it  
+- An **open dispute**, **chargeback**, **insurance claim**, or **safety investigation** involves your account  
+- **Indian law** (including the DPDP Act and IT Act) mandates a specific retention period  
+
+We will inform you in our response to your deletion request if any of these exceptions apply to your case.
+
+### 2.5 Questions about deletion
+
+Email **support@nashikflow.app** or see **Section 12** (Grievance Officer) for privacy complaints.
+
+---
+
+## 3. Who This Policy Applies To
 
 This Policy applies to personal data we process about:
 
@@ -39,11 +106,11 @@ This Policy applies to personal data we process about:
 
 ---
 
-## 3. Personal Data We Collect
+## 4. Personal Data We Collect
 
 We collect personal data that you provide directly, that is generated through your use of the Services, and that we receive from third parties where permitted by law.
 
-### 3.1 Data You Provide
+### 4.1 Data You Provide
 
 | Category | Examples | Typical users |
 |----------|----------|---------------|
@@ -57,16 +124,16 @@ We collect personal data that you provide directly, that is generated through yo
 | **Communications** | Support tickets, in-app chat, call recordings (where disclosed and permitted), feedback and ratings | All user types |
 | **Referrals & promotions** | Referral codes used or shared, promotional participation | Customers, drivers |
 
-### 3.2 Data Collected Automatically
+### 4.2 Data Collected Automatically
 
 | Category | Examples | Purpose (summary) |
 |----------|----------|-------------------|
 | **Precise & approximate location** | GPS coordinates, speed, heading, route history during active and background sessions (as permitted by your device settings) | Matching, navigation, safety, ETA |
 | **Device information** | Device model, operating system, unique device identifiers, app version, IP address, mobile network | Security, fraud prevention, compatibility |
 | **Usage & analytics** | Screens viewed, taps, session duration, crash logs, performance metrics | Product improvement, debugging |
-| **Cookies & similar technologies** | Session tokens, preferences on web (see Section 12) | Authentication, analytics |
+| **Cookies & similar technologies** | Session tokens, preferences on web (see Section 13) | Authentication, analytics |
 
-### 3.3 Data from Third Parties
+### 4.3 Data from Third Parties
 
 We may receive information from:
 
@@ -81,11 +148,11 @@ We do not intentionally collect sensitive personal data beyond what is necessary
 
 ---
 
-## 4. How We Use Your Personal Data
+## 5. How We Use Your Personal Data
 
 We use personal data for the following purposes. Where the DPDP Act requires a lawful ground, we rely on **your consent**, **performance of a contract**, **legal obligation**, or **legitimate uses** permitted under applicable law (such as fraud prevention or network security).
 
-### 4.1 Core Service Delivery
+### 5.1 Core Service Delivery
 
 - **Account creation and authentication** — registering you, verifying your phone or email, and securing your account  
 - **Order matching and dispatch** — connecting customers with available driver partners based on location, vehicle type, and demand  
@@ -94,7 +161,7 @@ We use personal data for the following purposes. Where the DPDP Act requires a l
 - **Payments and settlements** — processing customer payments, driver payouts, refunds, invoices, and wallet operations  
 - **Real-time tracking** — showing live location of vehicles during active trips to relevant parties  
 
-### 4.2 Safety, Trust, and Compliance
+### 5.2 Safety, Trust, and Compliance
 
 - Verifying driver identity, licences, and vehicle documents  
 - Detecting fraud, abuse, duplicate accounts, and policy violations  
@@ -102,19 +169,19 @@ We use personal data for the following purposes. Where the DPDP Act requires a l
 - Complying with tax, accounting, transport, and regulatory requirements  
 - Responding to lawful requests from courts, police, or government authorities  
 
-### 4.3 Customer Support and Communications
+### 5.3 Customer Support and Communications
 
 - Resolving complaints, lost-item reports, and billing queries  
 - Sending transactional messages (OTP, booking confirmation, driver assigned, delivery completed)  
 - Sending service announcements, policy updates, and—where you have opted in—marketing offers  
 
-### 4.4 Product Improvement and Analytics
+### 5.4 Product Improvement and Analytics
 
 - Analysing aggregated usage patterns to improve matching algorithms, pricing, and user experience  
 - Conducting surveys and A/B tests  
 - Debugging errors and monitoring app performance  
 
-### 4.5 Business and Enterprise Features
+### 5.5 Business and Enterprise Features
 
 - Managing corporate accounts, central billing, usage reports, and authorised sub-users  
 - Enforcing business-specific pricing, credit limits, and service-level terms  
@@ -123,7 +190,7 @@ We will not use your personal data for purposes incompatible with those describe
 
 ---
 
-## 5. Location Data — Specific Notice
+## 6. Location Data — Specific Notice
 
 Location information is essential for a logistics platform like Carryoo.
 
@@ -135,15 +202,15 @@ Location information is essential for a logistics platform like Carryoo.
 
 You can control location permissions through your device settings. Disabling location may prevent you from booking rides, going online as a driver, or receiving accurate ETAs.
 
-We retain trip route data only as long as needed for operations, disputes, safety investigations, and legal retention periods (see Section 9).
+We retain trip route data only as long as needed for operations, disputes, safety investigations, and legal retention periods (see Section 9 and Section 2.3).
 
 ---
 
-## 6. How We Share Personal Data
+## 7. How We Share Personal Data
 
 We do not sell your personal data. We share it only as described below.
 
-### 6.1 Between Platform Users (Service-Necessary Sharing)
+### 7.1 Between Platform Users (Service-Necessary Sharing)
 
 | Shared with | Data shared | Why |
 |-------------|-------------|-----|
@@ -151,7 +218,7 @@ We do not sell your personal data. We share it only as described below.
 | **Customer** | Driver name, photo, vehicle number, live location during trip, rating | Safety and tracking |
 | **Business admin** | Trip history and billing for users under their organisation | Enterprise reporting |
 
-### 6.2 Service Providers and Processors
+### 7.2 Service Providers and Processors
 
 We engage trusted third parties who process data on our instructions, including:
 
@@ -167,11 +234,11 @@ We engage trusted third parties who process data on our instructions, including:
 
 These parties are contractually required to protect your data and use it only for the services they provide to us.
 
-### 6.3 Business Partners and Affiliates
+### 7.3 Business Partners and Affiliates
 
 Where you use Carryoo Business or promotional programmes, we may share limited data with the corporate account owner or programme partners as disclosed at sign-up.
 
-### 6.4 Legal and Safety Disclosures
+### 7.4 Legal and Safety Disclosures
 
 We may disclose personal data when we believe in good faith that disclosure is necessary to:
 
@@ -180,23 +247,23 @@ We may disclose personal data when we believe in good faith that disclosure is n
 - Protect the rights, property, or safety of Carryoo, our users, or the public  
 - Detect, prevent, or address fraud, security, or technical issues  
 
-### 6.5 Business Transfers
+### 7.5 Business Transfers
 
 If we are involved in a merger, acquisition, or sale of assets, your personal data may be transferred as part of that transaction, subject to confidentiality and continued protection consistent with this Policy.
 
-### 6.6 Aggregated and De-Identified Data
+### 7.6 Aggregated and De-Identified Data
 
 We may share statistics that do not identify individuals (e.g., average delivery times in our service areas) for research, marketing, or industry reports.
 
 ---
 
-## 7. International Data Transfers
+## 8. International Data Transfers
 
 Our primary systems are located in India. Some service providers may process data on servers outside India. Where personal data is transferred internationally, we implement appropriate safeguards as required under the DPDP Act and applicable rules, such as contractual clauses and assessments of recipient jurisdictions.
 
 ---
 
-## 8. Data Retention
+## 9. Data Retention
 
 We retain personal data only for as long as necessary to fulfil the purposes in this Policy, unless a longer period is required or permitted by law.
 
@@ -213,7 +280,7 @@ When retention ends, we delete or irreversibly anonymise data in accordance with
 
 ---
 
-## 9. Security Measures
+## 10. Security Measures
 
 We implement administrative, technical, and organisational measures designed to protect personal data, including:
 
@@ -227,7 +294,7 @@ No method of transmission or storage is completely secure. You are responsible f
 
 ---
 
-## 10. Your Rights and Choices
+## 11. Your Rights and Choices
 
 Under the DPDP Act and our practices, you may have the following rights in relation to your personal data (subject to applicable exceptions):
 
@@ -237,24 +304,26 @@ Under the DPDP Act and our practices, you may have the following rights in relat
 | **Right to correction** | Update inaccurate or incomplete personal data | Edit profile in-app or contact support |
 | **Right to erasure** | Request deletion of personal data when it is no longer necessary or consent is withdrawn | Submit a deletion request (see below); some data may be retained where required by law |
 | **Right to withdraw consent** | Stop processing that relies on consent (e.g., marketing, optional location) | Use opt-out links, device settings, or contact support |
-| **Right to grievance redressal** | Raise concerns with our Grievance Officer | See Section 11 |
+| **Right to grievance redressal** | Raise concerns with our Grievance Officer | See Section 12 |
 | **Nomination** | Nominate another individual to exercise your rights in the event of death or incapacity | Contact support with required documentation |
 
-### 10.1 Account Deletion
+### 11.1 Account deletion
 
-You may request account deletion through the app (where supported) or by emailing **support@nashikflow.app** from your registered email or phone. We will verify your identity before processing. Deletion may be delayed where we must retain records for legal, tax, or dispute resolution purposes.
+For full steps, data deleted or kept, and retention periods required by Google Play, see **Section 2 (Account and data deletion)** above.
 
-### 10.2 Marketing Opt-Out
+You may also request deletion by emailing **support@nashikflow.app** from your registered email or phone. We will verify your identity before processing.
+
+### 11.2 Marketing Opt-Out
 
 You may opt out of promotional SMS, email, or push notifications via message instructions or app settings. Transactional messages related to active bookings cannot be fully opted out while you use the Services.
 
-### 10.3 Driver Partners
+### 11.3 Driver Partners
 
 Drivers who wish to stop processing must go offline, close their partner account, and settle outstanding payouts. Certain records (trips, tax, KYC) may still be retained as required by law.
 
 ---
 
-## 11. Grievance Officer and Contact
+## 12. Grievance Officer and Contact
 
 In accordance with applicable Indian law, you may contact our Grievance Officer for privacy-related complaints:
 
@@ -271,7 +340,7 @@ If you are not satisfied with our response, you may have the right to approach t
 
 ---
 
-## 12. Cookies and Similar Technologies (Web)
+## 13. Cookies and Similar Technologies (Web)
 
 When you use our website or web-based admin tools, we and our partners may use cookies, pixels, and local storage to:
 
@@ -283,25 +352,25 @@ You can control cookies through your browser settings. Disabling essential cooki
 
 ---
 
-## 13. Children’s Privacy
+## 14. Children’s Privacy
 
 The Platform is not intended for individuals under **18 years** of age. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact **support@nashikflow.app** and we will take steps to delete it.
 
 ---
 
-## 14. Third-Party Links and SDKs
+## 15. Third-Party Links and SDKs
 
 The Platform may contain links to third-party websites or integrate third-party SDKs (maps, payments, analytics). Their privacy practices are governed by their own policies. We encourage you to review those policies before providing them information.
 
 ---
 
-## 15. Changes to This Policy
+## 16. Changes to This Policy
 
 We may update this Policy from time to time to reflect changes in law, technology, or our Services. We will post the revised Policy with an updated “Last updated” date and, where required, notify you through the app, email, or SMS. Continued use after the effective date constitutes acceptance of the revised Policy, to the extent permitted by law.
 
 ---
 
-## 16. Definitions
+## 17. Definitions
 
 | Term | Meaning |
 |------|---------|
@@ -312,7 +381,7 @@ We may update this Policy from time to time to reflect changes in law, technolog
 
 ---
 
-## 17. Summary Table — Data Uses at a Glance
+## 18. Summary Table — Data Uses at a Glance
 
 | Purpose | Data used | Legal basis (typical) |
 |---------|-----------|------------------------|

@@ -8,6 +8,18 @@ body = markdown.markdown(md, extensions=["tables", "fenced_code"])
 for email in ("support@nashikflow.app", "business@nashikflow.app"):
     body = body.replace(email, f'<a href="mailto:{email}">{email}</a>')
 
+body = body.replace(
+    "<h2>2. Account and data deletion (Carryoo)</h2>",
+    '<section class="deletion-highlight" id="account-deletion">'
+    "<h2>2. Account and data deletion (Carryoo)</h2>",
+    1,
+)
+body = body.replace(
+    "<h2>3. Who This Policy Applies To</h2>",
+    "</section><h2>3. Who This Policy Applies To</h2>",
+    1,
+)
+
 STATIC_CSS = """
     :root {
       color-scheme: light dark;
@@ -44,6 +56,27 @@ STATIC_CSS = """
     .site-header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; font-weight: 700; }
     .site-header p { margin: 0; opacity: 0.92; font-size: 0.95rem; }
     .site-header .dates { margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.9; }
+    .site-header .nav { margin-top: 1rem; }
+    .site-header .nav a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .deletion-highlight {
+      margin: 0 -0.25rem 1.5rem;
+      padding: 1rem 1rem 0.25rem;
+      border: 2px solid var(--accent);
+      border-radius: 10px;
+      background: color-mix(in srgb, var(--accent) 8%, var(--card));
+    }
+    .deletion-highlight h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+      font-size: 1.2rem;
+    }
+    .deletion-highlight h3 { color: var(--fg); }
     main { max-width: 48rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
     article {
       background: var(--card);
@@ -112,6 +145,7 @@ def wrap_html(body: str) -> str:
     <h1>Carryoo</h1>
     <p>Privacy Policy</p>
     <p class="dates">Last updated: 29 May 2026 · Effective: 29 May 2026</p>
+    <p class="nav"><a href="#account-deletion">Account &amp; data deletion (Google Play)</a></p>
   </header>
   <main>
     <article lang="en">
