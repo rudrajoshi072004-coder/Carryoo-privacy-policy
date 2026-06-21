@@ -1,17 +1,37 @@
 # Carryoo — Privacy Policy (static HTML)
 
-**100% static HTML** for [GitHub Pages](https://pages.github.com/) and [Google Play](https://play.google.com/console) privacy policy URL.
+**100% static HTML** for [Google Play](https://play.google.com/console) privacy policy URL. Deploy on [Railway](https://railway.app/) or [GitHub Pages](https://pages.github.com/).
 
-No JavaScript. No build step on GitHub — only upload and serve HTML.
+No JavaScript in the page itself. Railway runs a tiny Python static file server (`server.py`).
 
-## Public URLs (after Pages is enabled)
+## Deploy on Railway (recommended)
+
+1. Push this repo to GitHub (or connect the repo in Railway).
+2. [Railway](https://railway.app/) → **New Project** → **Deploy from GitHub repo** → select this repository.
+3. Railway auto-detects Python via `requirements.txt` and starts `python server.py` (see `Procfile` / `railway.toml`).
+4. After deploy, open **Settings → Networking → Generate Domain** to get a public URL like `https://your-app.up.railway.app`.
+5. Paste that URL (or `https://your-app.up.railway.app/privacy-policy.html`) in **Play Console → App content → Privacy policy**.
+
+| Page | URL |
+|------|-----|
+| Home | `https://<your-railway-domain>/` |
+| Same policy | `https://<your-railway-domain>/privacy-policy.html` |
+
+**Local test (same as Railway):**
+
+```bash
+python server.py
+# Open http://localhost:8080
+```
+
+Railway sets the `PORT` environment variable automatically; locally it defaults to `8080`.
+
+## Public URLs (GitHub Pages)
 
 | Page | URL |
 |------|-----|
 | Home | https://rudrajoshi072004-coder.github.io/Carryoo-privacy-policy/ |
 | Same policy | https://rudrajoshi072004-coder.github.io/Carryoo-privacy-policy/privacy-policy.html |
-
-Use either URL in **Play Console → App content → Privacy policy**.
 
 ## Deploy on GitHub
 
@@ -25,7 +45,9 @@ Use either URL in **Play Console → App content → Privacy policy**.
 |------|------|
 | `index.html` | Main static page (`lang="en"`) |
 | `privacy-policy.html` | Same content, alternate URL |
-| `.nojekyll` | Lets GitHub serve the site as plain static files |
+| `server.py` | Static file server for Railway (reads `$PORT`) |
+| `Procfile` / `railway.toml` | Railway start command and health check |
+| `.nojekyll` | Lets GitHub serve the site as plain static files (Pages only) |
 
 `PRIVACY_POLICY.md` and `build_index.py` are only for editing locally — **GitHub serves the HTML files directly**.
 

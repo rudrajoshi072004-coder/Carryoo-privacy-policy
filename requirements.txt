@@ -1,0 +1,3 @@
+# Runtime uses Python stdlib only (server.py).
+# Uncomment to regenerate HTML from PRIVACY_POLICY.md locally or in CI:
+# markdown>=3.5
