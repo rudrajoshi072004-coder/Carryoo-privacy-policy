@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carryoo Help Center — customer, driver partner, and enterprise support. Contact us for bookings, payouts, and business logistics.">
+  <meta name="robots" content="index, follow">
+  <title>Support | Carryoo Help Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f0f3ff;
+      --ink: #040a1a;
+      --text: #3a3a3a;
+      --muted: #64748b;
+      --blue: #0a57ff;
+      --blue-deep: #0846d6;
+      --teal: #00c2a8;
+      --soft: #eef2ff;
+      --card: #fff;
+      --footer-bg: #0b1220;
+      --footer-muted: #bdbdbd;
+      --line: #e2e8f0;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-size: 62.5%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Titillium Web", "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    button, input { font-family: inherit; }
+
+    .install-banner {
+      background: #0b1220;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 120;
+    }
+    .install-banner__inner {
+      max-width: 110rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+    }
+    .install-banner__left { display: flex; align-items: center; gap: 1.2rem; }
+    .install-banner__icon { width: 4rem; height: 4rem; border-radius: 0.9rem; }
+    .install-banner__copy strong { display: block; font-size: 1.5rem; font-weight: 700; }
+    .install-banner__copy span { display: block; font-size: 1.25rem; color: #94a3b8; margin-top: 0.2rem; }
+    .install-banner__actions { display: flex; align-items: center; gap: 1rem; }
+    .btn-open-app {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.9rem 1.8rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-open-app:hover { background: var(--blue-deep); color: #fff; text-decoration: none; }
+    .install-banner__close {
+      background: transparent; border: none; color: #94a3b8; font-size: 2rem; cursor: pointer; padding: 0.4rem 0.6rem;
+    }
+    .install-banner[hidden] { display: none !important; }
+    body.has-install-banner .site-header { top: 6.2rem; }
+
+    .site-header {
+      background: #fff;
+      padding: 1.6rem 4rem;
+      box-shadow: 0 0 1.2rem 0.3rem rgba(0,0,0,0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header__inner {
+      max-width: 110rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 0.8rem;
+      text-decoration: none; color: var(--ink); font-weight: 700; font-size: 2rem;
+    }
+    .brand:hover { text-decoration: none; }
+    .brand-mark {
+      width: 3.2rem; height: 3.2rem; border-radius: 0.6rem;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; font-weight: 700;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 2.4rem;
+      list-style: none; margin: 0; padding: 0; flex-wrap: wrap;
+    }
+    .nav-links a { color: #000; font-size: 1.6rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links .active { color: var(--blue); text-decoration: none; }
+
+    /* Hero help center */
+    .hero {
+      background: linear-gradient(145deg, #040a1a 0%, #0a1a4a 45%, #0a57ff 120%);
+      color: #fff;
+      padding: 5.5rem 4rem 7rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -8%;
+      top: 20%;
+      width: 40rem;
+      height: 40rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,194,168,0.28), transparent 70%);
+      pointer-events: none;
+    }
+    .hero__inner {
+      max-width: 80rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.4rem;
+      padding: 0.45rem 1.1rem;
+      border: 1px solid rgba(0,194,168,0.4);
+      border-radius: 999px;
+      background: rgba(0,194,168,0.1);
+    }
+    .hero h1 {
+      margin: 0 0 1.2rem;
+      font-size: clamp(3rem, 5vw, 4.4rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .hero p {
+      margin: 0 auto 2.8rem;
+      font-size: 1.7rem;
+      color: #dbe4ff;
+      max-width: 56rem;
+      line-height: 1.6;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: #fff;
+      border-radius: 1.2rem;
+      padding: 0.6rem;
+      box-shadow: 0 1.2rem 3.2rem rgba(0,0,0,0.25);
+      max-width: 64rem;
+      margin: 0 auto;
+    }
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 1.2rem 1.6rem;
+      font-size: 1.6rem;
+      color: var(--ink);
+      background: transparent;
+      min-width: 0;
+    }
+    .search-box button {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 0.8rem;
+      padding: 1.2rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .search-box button:hover { background: var(--blue-deep); }
+    .quick-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 2rem;
+    }
+    .quick-chips button {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .quick-chips button:hover,
+    .quick-chips button.is-active {
+      background: #fff;
+      color: var(--blue);
+      border-color: #fff;
+    }
+
+    .section {
+      max-width: 110rem;
+      margin: 0 auto;
+      padding: 5.5rem 4rem;
+    }
+    .section-label {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin: 0 0 0.8rem;
+    }
+    .section-title {
+      margin: 0 0 1rem;
+      font-size: clamp(2.4rem, 3.5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--ink);
+    }
+    .section-desc {
+      margin: 0 0 3rem;
+      font-size: 1.6rem;
+      color: var(--muted);
+      max-width: 60rem;
+    }
+    .center { text-align: center; }
+    .center .section-desc { margin-left: auto; margin-right: auto; }
+
+    /* Support channel cards */
+    .channels { background: #fff; }
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .channel-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1.4rem;
+      padding: 2.4rem;
+      box-shadow: 0 0.6rem 2rem rgba(4,10,26,0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .channel-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 1.2rem 2.8rem rgba(4,10,26,0.1);
+    }
+    .channel-icon {
+      width: 5.2rem;
+      height: 5.2rem;
+      border-radius: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 1.6rem;
+      color: #fff;
+    }
+    .channel-card.customer .channel-icon { background: linear-gradient(135deg, #0a57ff, #3b82f6); }
+    .channel-card.partner .channel-icon { background: linear-gradient(135deg, #00c2a8, #14b8a6); }
+    .channel-card.enterprise .channel-icon { background: linear-gradient(135deg, #1e3a8a, #0a57ff); }
+    .channel-card h3 {
+      margin: 0 0 0.8rem;
+      font-size: 1.8rem;
+      color: var(--ink);
+      font-weight: 800;
+    }
+    .channel-card p {
+      margin: 0 0 1.8rem;
+      font-size: 1.45rem;
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .channel-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .channel-actions a, .channel-actions button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 1.4rem;
+      border-radius: 0.7rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-solid {
+      background: var(--blue);
+      color: #fff;
+    }
+    .btn-solid:hover { background: var(--blue-deep); color: #fff; text-decoration: none; }
+    .btn-outline {
+      background: var(--soft);
+      color: var(--blue);
+      border: 1px solid #c7d7ff !important;
+    }
+    .btn-outline:hover { background: #dbe4ff; text-decoration: none; }
+
+    /* Contact strip */
+    .contact-strip {
+      background: var(--bg);
+      padding: 0 4rem 5rem;
+    }
+    .contact-strip__inner {
+      max-width: 110rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+    .contact-pill {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 1.2rem;
+      padding: 2rem;
+      display: flex;
+      gap: 1.4rem;
+      align-items: flex-start;
+    }
+    .contact-pill .dot {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .contact-pill strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+    .contact-pill span, .contact-pill a {
+      font-size: 1.4rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* FAQ */
+    .faq { background: #fff; }
+    .faq-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2.4rem;
+    }
+    .faq-toolbar button {
+      background: var(--soft);
+      border: 1px solid #c7d7ff;
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 0.7rem 1.4rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .faq-toolbar button.is-active {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+    .faq-list { max-width: 86rem; }
+    details.faq-item {
+      background: var(--bg);
+      border: 1px solid #dbe4ff;
+      border-radius: 1rem;
+      margin-bottom: 1.2rem;
+      padding: 0 2rem;
+      overflow: hidden;
+    }
+    details.faq-item[hidden] { display: none !important; }
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.8rem 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.6rem;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: "+";
+      font-size: 2.2rem;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+    details.faq-item[open] summary::after { content: "−"; }
+    details.faq-item .faq-body {
+      padding: 0 0 1.8rem;
+      font-size: 1.5rem;
+      line-height: 1.7;
+      color: var(--muted);
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.4rem;
+    }
+    .faq-empty {
+      display: none;
+      padding: 2.4rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.5rem;
+      background: var(--bg);
+      border-radius: 1rem;
+    }
+    .faq-empty.is-visible { display: block; }
+
+    /* Offices */
+    .offices { background: var(--bg); }
+    .office-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2rem;
+    }
+    .hq-card {
+      background: linear-gradient(145deg, #040a1a, #0a1a4a);
+      color: #fff;
+      border-radius: 1.6rem;
+      padding: 3.2rem;
+    }
+    .hq-card .label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
+    }
+    .hq-card h3 {
+      margin: 0 0 1.2rem;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .hq-card p {
+      margin: 0 0 2rem;
+      font-size: 1.5rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+    .hq-card a.btn-solid {
+      display: inline-flex;
+      background: var(--teal);
+      color: #042f2e;
+    }
+    .hq-card a.btn-solid:hover { background: #14d4b8; color: #042f2e; }
+    .city-list {
+      display: grid;
+      gap: 1.2rem;
+    }
+    .city-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1.8rem 2rem;
+    }
+    .city-item strong {
+      display: block;
+      font-size: 1.6rem;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .city-item span {
+      font-size: 1.4rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .cta-band {
+      background: #fff;
+      padding: 0 4rem 6rem;
+    }
+    .cta-band__inner {
+      max-width: 110rem;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #0a1a4a, #0a57ff);
+      border-radius: 1.6rem;
+      padding: 3.6rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .cta-band h2 {
+      margin: 0 0 0.6rem;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .cta-band p {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #dbe4ff;
+    }
+    .cta-band .btn-open-app {
+      background: #fff;
+      color: var(--blue);
+    }
+    .cta-band .btn-open-app:hover { background: #eef2ff; color: var(--blue); }
+
+    /* Footer */
+    .site-footer {
+      background: var(--footer-bg);
+      color: #fff;
+      padding: 4rem 4rem 2.4rem;
+    }
+    .footer-inner { max-width: 110rem; margin: 0 auto; }
+    .footer-brand {
+      display: flex; align-items: center; gap: 0.8rem;
+      font-size: 2rem; font-weight: 700; color: #fff; text-decoration: none; margin-bottom: 2.4rem;
+    }
+    .footer-brand:hover { text-decoration: none; color: #fff; }
+    .footer-download {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2.4rem; flex-wrap: wrap; margin: 0 0 3.2rem; padding: 2.4rem;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 1.2rem;
+    }
+    .footer-download__info h4 { margin: 0 0 0.6rem; font-size: 1.8rem; font-weight: 800; color: #fff; }
+    .footer-download__info p { margin: 0 0 1.6rem; font-size: 1.35rem; color: var(--footer-muted); max-width: 42rem; line-height: 1.6; }
+    .footer-download__badges { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .store-badge {
+      display: inline-flex; align-items: center; gap: 1rem;
+      background: #000; border: 1px solid rgba(255,255,255,0.25); border-radius: 0.8rem;
+      padding: 0.8rem 1.4rem; color: #fff; min-width: 15.5rem; cursor: pointer;
+    }
+    .store-badge:hover { border-color: #fff; }
+    .store-badge__text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+    .store-badge__text small { font-size: 1rem; opacity: 0.85; }
+    .store-badge__text strong { font-size: 1.45rem; font-weight: 700; }
+    .footer-download__qr { text-align: center; }
+    .footer-download__qr img {
+      width: 12.5rem; height: 12.5rem; background: #fff; border-radius: 0.8rem; padding: 0.6rem; margin: 0 auto 0.8rem;
+    }
+    .footer-download__qr span { display: block; font-size: 1.2rem; color: var(--footer-muted); font-weight: 600; }
+    .footer-download__qr .demo-pill {
+      display: inline-block; margin-top: 0.5rem; padding: 0.2rem 0.7rem; border-radius: 999px;
+      background: rgba(10,87,255,0.35); color: #c5d4ff; font-size: 1.05rem; font-weight: 700;
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; margin-bottom: 3rem; }
+    .footer-col h4 { margin: 0 0 1.2rem; font-size: 1.6rem; font-weight: 700; color: #fff; }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; }
+    .footer-col li { margin-bottom: 0.8rem; }
+    .footer-col a { color: #fff; font-size: 1.4rem; text-decoration: none; }
+    .footer-col a:hover { color: #c5d4ff; }
+    .footer-legal {
+      border-top: 1px solid rgba(255,255,255,0.12); padding-top: 2rem;
+      color: var(--footer-muted); font-size: 1.3rem; line-height: 1.7;
+    }
+    .footer-legal h5 { margin: 0 0 0.8rem; color: #fff; font-size: 1.4rem; font-weight: 700; }
+    .footer-legal p { margin: 0 0 0.6rem; }
+    .footer-legal a { color: #c5d4ff; }
+
+    .demo-modal {
+      position: fixed; inset: 0; z-index: 200; display: none;
+      align-items: center; justify-content: center; padding: 2rem;
+    }
+    .demo-modal.is-open { display: flex; }
+    .demo-modal__backdrop { position: absolute; inset: 0; background: rgba(4,10,26,0.55); }
+    .demo-modal__panel {
+      position: relative; background: #fff; border-radius: 1.2rem; max-width: 42rem; width: 100%;
+      padding: 2.8rem 2.4rem 2.4rem; box-shadow: 0 1.6rem 4rem rgba(0,0,0,0.25); text-align: center;
+    }
+    .demo-modal__panel img { width: 6.4rem; height: 6.4rem; margin: 0 auto 1.6rem; border-radius: 1.4rem; }
+    .demo-modal__panel h3 { margin: 0 0 0.8rem; font-size: 2rem; color: var(--ink); font-weight: 800; }
+    .demo-modal__panel p { margin: 0 0 2rem; font-size: 1.45rem; color: var(--muted); line-height: 1.6; }
+    .demo-modal__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary {
+      background: var(--soft); color: var(--blue); border: none; border-radius: 0.5rem;
+      padding: 0.9rem 1.6rem; font-size: 1.4rem; font-weight: 700; cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .site-header { padding: 1.2rem 2rem; }
+      .hero, .section, .contact-strip, .cta-band { padding-left: 2rem; padding-right: 2rem; }
+      .channel-grid, .contact-strip__inner, .office-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.4rem; }
+      .site-footer { padding: 3rem 2rem 2rem; }
+    }
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+      .install-banner__copy span { display: none; }
+      body.has-install-banner .site-header { top: 5.6rem; }
+      .search-box { flex-direction: column; align-items: stretch; }
+      .footer-download { justify-content: center; text-align: center; }
+      .footer-download__badges { justify-content: center; }
+    }
+  </style>
+</head>
+<body class="has-install-banner">
+  <div class="install-banner" id="installBanner" role="region" aria-label="Install Carryoo">
+    <div class="install-banner__inner">
+      <div class="install-banner__left">
+        <img class="install-banner__icon" src="assets/app-icon.svg" alt="" width="40" height="40">
+        <div class="install-banner__copy">
+          <strong>Install Carryoo</strong>
+          <span>for efficient goods transportation</span>
+        </div>
+      </div>
+      <div class="install-banner__actions">
+        <button type="button" class="btn-open-app js-open-app">OPEN APP</button>
+        <button type="button" class="install-banner__close" id="closeInstallBanner" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Carryoo
+      </a>
+      <ul class="nav-links">
+        <li><a href="enterprise.html">For Enterprise</a></li>
+        <li><a href="driver-partner.html">Driver Partner</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+        <li><a href="index.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero-tag">Help Center</div>
+      <h1>Need assistance?</h1>
+      <p>We’re happy to help. Search common topics or reach us through the right channel for customers, driver partners, and businesses.</p>
+      <form class="search-box" id="helpSearchForm" role="search" action="#faqs" onsubmit="return false;">
+        <input type="search" id="helpSearch" placeholder="Search bookings, payouts, account deletion…" aria-label="Search help topics" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+      <div class="quick-chips" aria-label="Popular topics">
+        <button type="button" data-chip="booking">Bookings</button>
+        <button type="button" data-chip="payment">Payments</button>
+        <button type="button" data-chip="partner">Driver partner</button>
+        <button type="button" data-chip="account">Account</button>
+        <button type="button" data-chip="enterprise">Enterprise</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="channels section" id="channels">
+    <p class="section-label center">Support channels</p>
+    <h2 class="section-title center">Choose how you want help</h2>
+    <p class="section-desc center">Pick the channel that matches your need — faster routing, clearer answers.</p>
+    <div class="channel-grid">
+      <article class="channel-card customer">
+        <div class="channel-icon" aria-hidden="true">CS</div>
+        <h3>Customer support</h3>
+        <p>Help with bookings, trip status, cancellations, refunds, and app account issues.</p>
+        <div class="channel-actions">
+          <a class="btn-solid" href="mailto:support@nashikflow.app?subject=Carryoo%20customer%20support">Email support@nashikflow.app</a>
+          <a class="btn-outline" href="#faqs" data-chip="booking">Read FAQs</a>
+        </div>
+      </article>
+      <article class="channel-card partner">
+        <div class="channel-icon" aria-hidden="true">DP</div>
+        <h3>Drive with Carryoo</h3>
+        <p>Attach your two-wheeler, tempo, or mini truck. Get help with onboarding, trips, and payouts.</p>
+        <div class="channel-actions">
+          <a class="btn-solid" href="driver-partner.html">Become a partner</a>
+          <a class="btn-outline" href="mailto:support@nashikflow.app?subject=Carryoo%20driver%20partner%20support">Partner support email</a>
+        </div>
+      </article>
+      <article class="channel-card enterprise">
+        <div class="channel-icon" aria-hidden="true">EN</div>
+        <h3>Enterprise services</h3>
+        <p>Centralised logistics for businesses — wallets, multi-user access, and dedicated onboarding.</p>
+        <div class="channel-actions">
+          <a class="btn-solid" href="enterprise.html">Explore Enterprise</a>
+          <a class="btn-outline" href="mailto:business@nashikflow.app?subject=Carryoo%20Enterprise%20enquiry">Email business@nashikflow.app</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="contact-strip">
+    <div class="contact-strip__inner">
+      <div class="contact-pill">
+        <div class="dot">@</div>
+        <div>
+          <strong>Email us</strong>
+          <a href="mailto:support@nashikflow.app">support@nashikflow.app</a><br>
+          <a href="mailto:business@nashikflow.app">business@nashikflow.app</a>
+        </div>
+      </div>
+      <div class="contact-pill">
+        <div class="dot">⏱</div>
+        <div>
+          <strong>Response time</strong>
+          <span>We typically reply within one business day (demo contact for now).</span>
+        </div>
+      </div>
+      <div class="contact-pill">
+        <div class="dot">🔒</div>
+        <div>
+          <strong>Privacy &amp; deletion</strong>
+          <a href="index.html#account-deletion">Account deletion steps</a><br>
+          <a href="index.html">Full privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="faq section" id="faqs">
+    <p class="section-label">FAQs</p>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <p class="section-desc">Filter by topic or use the search above. Results update instantly.</p>
+    <div class="faq-toolbar" role="tablist" aria-label="FAQ categories">
+      <button type="button" class="is-active" data-filter="all">All</button>
+      <button type="button" data-filter="booking">Bookings</button>
+      <button type="button" data-filter="payment">Payments</button>
+      <button type="button" data-filter="partner">Driver partner</button>
+      <button type="button" data-filter="account">Account</button>
+      <button type="button" data-filter="enterprise">Enterprise</button>
+    </div>
+    <div class="faq-list" id="faqList">
+      <details class="faq-item" data-tags="booking account" open>
+        <summary>How do I track my booking?</summary>
+        <div class="faq-body">Open the Carryoo app, go to your active or past orders, and select the trip to see live status. For help, email support@nashikflow.app with your registered mobile number and booking ID.</div>
+      </details>
+      <details class="faq-item" data-tags="booking payment">
+        <summary>How do cancellations and refunds work?</summary>
+        <div class="faq-body">Cancellation rules depend on trip status and timing. If a refund applies, it is processed to your original payment method. Contact support@nashikflow.app if a refund is delayed.</div>
+      </details>
+      <details class="faq-item" data-tags="payment">
+        <summary>Which payment methods are supported?</summary>
+        <div class="faq-body">Carryoo supports common digital payment options in-app (UPI, cards, wallets where enabled). Enterprise accounts can also use prepaid business wallets.</div>
+      </details>
+      <details class="faq-item" data-tags="partner">
+        <summary>How do I join as a driver partner?</summary>
+        <div class="faq-body">Visit the <a href="driver-partner.html">Driver Partner</a> page, download the partner app (demo until Play Store launch), register your documents, and complete verification. No registration fee.</div>
+      </details>
+      <details class="faq-item" data-tags="partner payment">
+        <summary>When do driver partners get paid?</summary>
+        <div class="faq-body">Payouts follow the schedule shown in the partner app. You can check daily earnings and weekly settlements in-app. For payout issues, email support@nashikflow.app.</div>
+      </details>
+      <details class="faq-item" data-tags="account">
+        <summary>How do I delete my Carryoo account?</summary>
+        <div class="faq-body">Follow the steps in our <a href="index.html#account-deletion">Account deletion</a> section, or email support@nashikflow.app with subject “Carryoo — Account deletion request” from your registered contact.</div>
+      </details>
+      <details class="faq-item" data-tags="enterprise">
+        <summary>How do I set up a Carryoo Enterprise account?</summary>
+        <div class="faq-body">See <a href="enterprise.html">Carryoo Enterprise</a> or email business@nashikflow.app. Activation usually takes about one business day after verification.</div>
+      </details>
+      <details class="faq-item" data-tags="enterprise payment">
+        <summary>Do enterprise accounts get a dashboard?</summary>
+        <div class="faq-body">Yes. Enterprise users get a web dashboard for wallet balance, trip details, users, and statements where enabled.</div>
+      </details>
+      <details class="faq-item" data-tags="account booking">
+        <summary>I can’t log in / OTP not received</summary>
+        <div class="faq-body">Check network coverage, wait a minute, and retry. Make sure you use the registered mobile number. If OTP still fails, email support@nashikflow.app with your number and device details.</div>
+      </details>
+    </div>
+    <div class="faq-empty" id="faqEmpty">No topics matched your search. Try another keyword or email support@nashikflow.app.</div>
+  </section>
+
+  <section class="offices section" id="offices">
+    <p class="section-label">Our offices</p>
+    <h2 class="section-title">Where to find Carryoo</h2>
+    <p class="section-desc">Head office details for correspondence. Replace placeholders with your registered address before going live.</p>
+    <div class="office-grid">
+      <div class="hq-card">
+        <div class="label">Head office</div>
+        <h3>Nashik</h3>
+        <p>
+          Carryoo / [Legal Entity Name]<br>
+          [Registered Office Address]<br>
+          Nashik, Maharashtra, India
+        </p>
+        <a class="btn-solid" href="mailto:support@nashikflow.app?subject=Carryoo%20office%20enquiry">Contact head office</a>
+      </div>
+      <div class="city-list">
+        <div class="city-item">
+          <strong>Customer support</strong>
+          <span>support@nashikflow.app — bookings, refunds, account help</span>
+        </div>
+        <div class="city-item">
+          <strong>Business / Enterprise</strong>
+          <span>business@nashikflow.app — wallets, multi-user, fleet logistics</span>
+        </div>
+        <div class="city-item">
+          <strong>Service cities</strong>
+          <span>Nashik first, with expansion planned across Maharashtra and beyond</span>
+        </div>
+        <div class="city-item">
+          <strong>Privacy &amp; grievance</strong>
+          <span>See our <a href="index.html">Privacy Policy</a> for grievance officer details</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band__inner">
+      <div>
+        <h2>Still need help?</h2>
+        <p>Write to us with your registered number and we’ll get back within one business day.</p>
+      </div>
+      <a class="btn-open-app" href="mailto:support@nashikflow.app?subject=Carryoo%20support%20request">Email Carryoo support</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Carryoo
+      </a>
+      <div class="footer-download">
+        <div class="footer-download__info">
+          <h4>Download our app</h4>
+          <p>Scan the demo QR or tap a store button. Store links go live when Carryoo is published.</p>
+          <div class="footer-download__badges">
+            <button type="button" class="store-badge js-open-app" aria-label="Google Play demo">
+              <span class="store-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+              </span>
+              <span class="store-badge__text"><small>GET IT ON</small><strong>Google Play</strong></span>
+            </button>
+            <button type="button" class="store-badge js-open-app" aria-label="App Store demo">
+              <span class="store-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.3c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.2 0 1.9-1 2.6-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.2-.8-2.2-3.7zm-2-6.2c.6-.7 1-1.7.9-2.7-1 .1-2.1.6-2.7 1.4-.6.7-1.1 1.7-.9 2.7 1 0 2-.6 2.7-1.4z"/></svg>
+              </span>
+              <span class="store-badge__text"><small>Download on the</small><strong>App Store</strong></span>
+            </button>
+          </div>
+        </div>
+        <div class="footer-download__qr">
+          <img src="assets/qr-demo.svg" alt="Demo QR code" width="146" height="146">
+          <span>Scan to download</span>
+          <span class="demo-pill">Demo QR</span>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Carryoo</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="enterprise.html#vehicles">Two Wheelers</a></li>
+            <li><a href="driver-partner.html">Driver Partner</a></li>
+            <li><a href="enterprise.html">Carryoo Business</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="support.html">Help Center</a></li>
+            <li><a href="index.html">Privacy Policy</a></li>
+            <li><a href="index.html#account-deletion">Account Deletion</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></li>
+            <li><a href="mailto:business@nashikflow.app">business@nashikflow.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <h5>Registered Office:</h5>
+        <p>&copy; 2026 Carryoo / [Legal Entity Name]. [Registered Office Address, Nashik, Maharashtra, India]</p>
+        <p>Email: <a href="mailto:support@nashikflow.app">support@nashikflow.app</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-modal" id="demoModal" aria-hidden="true">
+    <div class="demo-modal__backdrop" data-close-modal></div>
+    <div class="demo-modal__panel" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <img src="assets/app-icon.svg" alt="" width="64" height="64">
+      <h3 id="demoModalTitle">Carryoo app — coming soon</h3>
+      <p>This is a demo install prompt. The app is not on the Play Store yet. Email us and we’ll notify you when downloads go live.</p>
+      <div class="demo-modal__actions">
+        <a class="btn-open-app" href="mailto:support@nashikflow.app?subject=Notify%20me%20when%20Carryoo%20app%20launches">Notify me</a>
+        <button type="button" class="btn-secondary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var banner = document.getElementById("installBanner");
+      var closeBtn = document.getElementById("closeInstallBanner");
+      var modal = document.getElementById("demoModal");
+      if (sessionStorage.getItem("carryooInstallBannerDismissed") === "1" && banner) {
+        banner.hidden = true;
+        document.body.classList.remove("has-install-banner");
+      }
+      if (closeBtn && banner) {
+        closeBtn.addEventListener("click", function () {
+          banner.hidden = true;
+          document.body.classList.remove("has-install-banner");
+          sessionStorage.setItem("carryooInstallBannerDismissed", "1");
+        });
+      }
+      function openModal() {
+        if (!modal) return;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+      }
+      document.querySelectorAll(".js-open-app").forEach(function (btn) {
+        btn.addEventListener("click", openModal);
+      });
+      document.querySelectorAll("[data-close-modal]").forEach(function (el) {
+        el.addEventListener("click", closeModal);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+      });
+
+      // FAQ search + filters
+      var items = Array.prototype.slice.call(document.querySelectorAll(".faq-item"));
+      var empty = document.getElementById("faqEmpty");
+      var searchInput = document.getElementById("helpSearch");
+      var activeFilter = "all";
+
+      function applyFaqFilter() {
+        var q = (searchInput && searchInput.value ? searchInput.value : "").trim().toLowerCase();
+        var visible = 0;
+        items.forEach(function (item) {
+          var tags = (item.getAttribute("data-tags") || "").toLowerCase();
+          var text = item.textContent.toLowerCase();
+          var tagOk = activeFilter === "all" || tags.indexOf(activeFilter) !== -1;
+          var searchOk = !q || text.indexOf(q) !== -1;
+          var show = tagOk && searchOk;
+          item.hidden = !show;
+          if (show) visible += 1;
+        });
+        if (empty) empty.classList.toggle("is-visible", visible === 0);
+      }
+
+      function setFilter(filter) {
+        activeFilter = filter || "all";
+        document.querySelectorAll(".faq-toolbar button").forEach(function (btn) {
+          btn.classList.toggle("is-active", btn.getAttribute("data-filter") === activeFilter);
+        });
+        document.querySelectorAll(".quick-chips button").forEach(function (btn) {
+          btn.classList.toggle("is-active", btn.getAttribute("data-chip") === activeFilter);
+        });
+        applyFaqFilter();
+        var faqs = document.getElementById("faqs");
+        if (faqs) faqs.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      document.querySelectorAll(".faq-toolbar button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setFilter(btn.getAttribute("data-filter"));
+        });
+      });
+      document.querySelectorAll("[data-chip]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setFilter(btn.getAttribute("data-chip"));
+        });
+      });
+      if (searchInput) {
+        searchInput.addEventListener("input", applyFaqFilter);
+      }
+      var form = document.getElementById("helpSearchForm");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          applyFaqFilter();
+          var faqs = document.getElementById("faqs");
+          if (faqs) faqs.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

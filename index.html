@@ -4,131 +4,712 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for Carryoo — logistics and on-demand delivery. Static page for Google Play Store.">
+  <meta name="description" content="Privacy Policy for Carryoo — logistics and on-demand delivery platform for customers and driver partners. Google Play compliant.">
   <meta name="robots" content="index, follow">
-  <title>Carryoo — Privacy Policy</title>
+  <title>Privacy Policy | Carryoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: #f8fafc;
-      --fg: #0f172a;
-      --muted: #475569;
-      --accent: #0d9488;
-      --card: #ffffff;
-      --border: #e2e8f0;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --fg: #f1f5f9;
-        --muted: #94a3b8;
-        --card: #1e293b;
-        --border: #334155;
-      }
+      --bg: #f0f3ff;
+      --ink: #040a1a;
+      --text: #3a3a3a;
+      --link: #2962ff;
+      --blue: #0a57ff;
+      --footer-bg: #0b1220;
+      --footer-muted: #bdbdbd;
+      --border: #ddd;
+      --card-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+      --page-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.54);
     }
     *, *::before, *::after { box-sizing: border-box; }
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-family: "Titillium Web", "Segoe UI", system-ui, sans-serif;
       background: var(--bg);
-      color: var(--fg);
-      line-height: 1.65;
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
     .site-header {
-      background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-      color: #fff;
-      padding: 2rem 1.25rem;
-      text-align: center;
+      background: #fff;
+      padding: 1.6rem 4rem;
+      box-shadow: 0 0 1.2rem 0.3rem rgba(0, 0, 0, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .site-header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; font-weight: 700; }
-    .site-header p { margin: 0; opacity: 0.92; font-size: 0.95rem; }
-    .site-header .dates { margin-top: 0.75rem; font-size: 0.85rem; opacity: 0.9; }
-    .site-header .nav { margin-top: 1rem; }
-    .site-header .nav a {
+    .site-header__inner {
+      max-width: 150rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+    .brand:hover { text-decoration: none; }
+    .brand-mark {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 0.6rem;
+      background: linear-gradient(135deg, #0a57ff 0%, #00c2a8 100%);
       color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #000;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
       font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 3px;
     }
-    .deletion-highlight {
-      margin: 0 -0.25rem 1.5rem;
-      padding: 1rem 1rem 0.25rem;
-      border: 2px solid var(--accent);
-      border-radius: 10px;
-      background: color-mix(in srgb, var(--accent) 8%, var(--card));
+    .nav-links a:hover { color: var(--blue); text-decoration: none; }
+    .nav-links .active { color: var(--blue); }
+
+    /* Page shell */
+    .page-shell {
+      background: #fff;
+      max-width: 1500px;
+      margin: 0 auto;
+      box-shadow: var(--page-shadow);
     }
-    .deletion-highlight h2 {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
+
+    /* Dark hero banner */
+    .hero-banner {
+      background-image: linear-gradient(154.48deg, #000, #040a1a);
+      min-height: 25rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-banner h1 {
+      color: #fff;
+      font-size: clamp(2.8rem, 5vw, 3.6rem);
+      line-height: 1.15;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin: 0;
+      padding: 6rem 2rem;
+    }
+
+    /* Overlapping white content card */
+    .main-wrap {
+      position: relative;
+    }
+    .policy-card {
+      margin: 0 8rem;
+      background: #fff;
+      box-shadow: var(--card-shadow);
+      transform: translateY(-80px);
+      border-radius: 0.5rem;
+      padding: 4rem;
+    }
+
+    .content-title {
+      font-weight: 800;
+      color: var(--ink);
+      font-size: 1.6rem;
+      margin: 0 0 1rem;
+    }
+    .meta-line {
+      font-size: 1.3rem;
+      color: #818181;
+      margin: 0 0 2rem;
+    }
+
+    .jump-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 0 0 2.4rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid #eee;
+    }
+    .jump-bar a {
       font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--blue);
+      padding: 0.4rem 1rem;
+      border: 1px solid #c5d4ff;
+      border-radius: 999px;
+      background: #f5f8ff;
+      white-space: nowrap;
     }
-    .deletion-highlight h3 { color: var(--fg); }
-    main { max-width: 48rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
-    article {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem 1.25rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    .jump-bar a:hover {
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
     }
-    article h1 { font-size: 1.35rem; margin-top: 0; }
-    article h2 {
-      font-size: 1.12rem;
-      margin-top: 2rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border);
-      color: var(--accent);
+
+    .legal-body {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      color: var(--text);
+      text-align: justify;
     }
-    article h3 { font-size: 1rem; margin-top: 1.25rem; }
-    article ul { padding-left: 1.25rem; }
-    article blockquote {
+    .legal-body p {
       margin: 1rem 0;
-      padding: 0.75rem 1rem;
-      border-left: 4px solid var(--accent);
-      background: var(--bg);
-      color: var(--muted);
-      font-size: 0.9rem;
+      line-height: 1.7;
+      font-size: 1.4rem;
+      text-align: justify;
+    }
+    .legal-body ul, .legal-body ol {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    .legal-body li {
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+      font-size: 1.4rem;
+    }
+    .legal-body strong, .legal-body b {
+      font-weight: 600;
+      color: #333;
+    }
+    .legal-body a { color: var(--link); text-decoration: none; }
+    .legal-body a:hover { text-decoration: underline; }
+
+    .section-title {
+      font-weight: 800;
+      color: var(--ink);
+      font-size: 1.6rem;
+      margin: 2.8rem 0 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+    }
+    .subsection-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      margin: 2rem 0 0.8rem;
+    }
+
+    .info-box {
+      margin: 1.25rem 0;
+      padding: 1.2rem 1.4rem;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 0.5rem;
+      font-size: 1.3rem;
+      color: #92400e;
+      text-align: left;
+    }
+    .info-box p { margin: 0; text-align: left; }
+
+    .deletion-highlight {
+      margin: 1.5rem 0;
+      padding: 1.5rem 1.5rem 0.5rem;
+      border: 2px solid #0d9488;
+      border-radius: 0.5rem;
+      background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+    }
+    .deletion-highlight .section-title { color: #0f766e; margin-top: 0; }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.2rem 0 1.6rem;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
-      margin: 1rem 0;
-      display: block;
-      overflow-x: auto;
+      margin: 0.8rem 0;
+      text-align: left;
     }
     th, td {
-      border: 1px solid var(--border);
-      padding: 0.5rem 0.65rem;
-      text-align: left;
+      padding: 0.8rem;
+      border: 0.1rem solid var(--border);
       vertical-align: top;
     }
-    th { background: var(--bg); font-weight: 600; }
-    hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
-    a { color: var(--accent); }
+    th {
+      background-color: #f5f5f5;
+      color: #2d2f34;
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+    td {
+      background: #fff;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      font-weight: 400;
+    }
+    tr:nth-child(even) td { background-color: #f9f9f9; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 2.4rem 0;
+    }
+
+    .contact-card {
+      margin-top: 2rem;
+      padding: 1.6rem;
+      background: #f7f8fc;
+      border: 1px solid #e5e7eb;
+      border-left: 4px solid var(--blue);
+      border-radius: 0.5rem;
+      text-align: left;
+    }
+    .contact-card h3 {
+      margin: 0 0 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .contact-card p { margin: 0.4rem 0; font-size: 1.4rem; text-align: left; }
+
+    /* Footer */
     .site-footer {
+      background: var(--footer-bg);
+      color: #fff;
+      padding: 4rem 4rem 2.4rem;
+    }
+    .footer-inner {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 2.4rem;
+    }
+    .footer-brand:hover { text-decoration: none; color: #fff; }
+
+    /* Footer download app + demo QR */
+    .footer-download {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      margin: 0 0 3.2rem;
+      padding: 2.4rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.2rem;
+    }
+    .footer-download__info h4 {
+      margin: 0 0 0.6rem;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-download__info p {
+      margin: 0 0 1.6rem;
+      font-size: 1.35rem;
+      color: var(--footer-muted);
+      line-height: 1.6;
+      max-width: 42rem;
+    }
+    .footer-download__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.4rem;
+      color: #fff;
+      text-decoration: none;
+      min-width: 15.5rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .store-badge:hover { border-color: #fff; color: #fff; text-decoration: none; }
+    .store-badge__icon {
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+    .store-badge__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.2;
+    }
+    .store-badge__text small {
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+    .store-badge__text strong {
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+    .footer-download__qr {
       text-align: center;
-      padding: 1rem 1.25rem 2rem;
-      font-size: 0.85rem;
-      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .footer-download__qr img {
+      width: 12.5rem;
+      height: 12.5rem;
+      background: #fff;
+      border-radius: 0.8rem;
+      padding: 0.6rem;
+      margin: 0 auto 0.8rem;
+    }
+    .footer-download__qr span {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--footer-muted);
+      font-weight: 600;
+    }
+    .footer-download__qr .demo-pill {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(10, 87, 255, 0.35);
+      color: #c5d4ff;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+    .footer-col h4 {
+      margin: 0 0 1.2rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 140%;
+      color: #fff;
+    }
+    .footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .footer-col li { margin-bottom: 0.8rem; }
+    .footer-col a {
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+    .footer-col a:hover { color: #c5d4ff; text-decoration: none; }
+    .footer-legal {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 2rem;
+      color: var(--footer-muted);
+      font-size: 1.3rem;
+      line-height: 1.7;
+    }
+    .footer-legal h5 {
+      margin: 0 0 0.8rem;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .footer-legal p { margin: 0 0 0.6rem; }
+    .footer-legal a { color: #c5d4ff; }
+
+    /* Install Carryoo — sticky top banner (demo) */
+    .install-banner {
+      background: #0b1220;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 120;
+    }
+    .install-banner__inner {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+    }
+    .install-banner__left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      min-width: 0;
+    }
+    .install-banner__icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 0.9rem;
+      flex-shrink: 0;
+    }
+    .install-banner__copy strong {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .install-banner__copy span {
+      display: block;
+      font-size: 1.25rem;
+      color: #94a3b8;
+      margin-top: 0.2rem;
+    }
+    .install-banner__actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .btn-open-app {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.9rem 1.8rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-open-app:hover { background: #0846d6; color: #fff; text-decoration: none; }
+    .install-banner__close {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.4rem 0.6rem;
+    }
+    .install-banner__close:hover { color: #fff; }
+    .install-banner[hidden] { display: none !important; }
+
+    /* Mid-page download card */
+    .download-card {
+      margin: 3.2rem 0 1rem;
+      padding: 2.4rem;
+      border-radius: 1.2rem;
+      background: linear-gradient(135deg, #0a1a4a 0%, #0a57ff 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+    .download-card h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .download-card p {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #dbe4ff;
+      text-align: left;
+      line-height: 1.6;
+    }
+    .download-card .btn-open-app {
+      background: #fff;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+    .download-card .btn-open-app:hover { background: #eef2ff; color: var(--blue); }
+    .demo-badge {
+      display: inline-block;
+      margin-left: 0.6rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    /* Demo modal */
+    .demo-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .demo-modal.is-open { display: flex; }
+    .demo-modal__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(4, 10, 26, 0.55);
+    }
+    .demo-modal__panel {
+      position: relative;
+      background: #fff;
+      border-radius: 1.2rem;
+      max-width: 42rem;
+      width: 100%;
+      padding: 2.8rem 2.4rem 2.4rem;
+      box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+    .demo-modal__panel img {
+      width: 6.4rem;
+      height: 6.4rem;
+      margin: 0 auto 1.6rem;
+      border-radius: 1.4rem;
+    }
+    .demo-modal__panel h3 {
+      margin: 0 0 0.8rem;
+      font-size: 2rem;
+      color: var(--ink);
+      font-weight: 800;
+    }
+    .demo-modal__panel p {
+      margin: 0 0 2rem;
+      font-size: 1.45rem;
+      color: #5a5a5a;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .demo-modal__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-secondary {
+      background: #eef2ff;
+      color: var(--blue);
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.9rem 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-secondary:hover { background: #dbe4ff; text-decoration: none; }
+
+    body.has-install-banner .site-header { top: 6.2rem; }
+
+    @media (max-width: 900px) {
+      .site-header { padding: 1.2rem 2rem; }
+      .nav-links { gap: 1.4rem; }
+      .nav-links a { font-size: 1.4rem; }
+      .policy-card {
+        margin: 1.5rem;
+        padding: 2.4rem 1.6rem;
+        transform: translateY(-48px);
+      }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 2.4rem; }
+      .site-footer { padding: 3rem 2rem 2rem; }
+      .install-banner { padding: 1rem 1.6rem; }
+      .download-card { padding: 2rem; }
+      .footer-download { padding: 2rem; }
+    }
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-banner { min-height: 18rem; }
+      .hero-banner h1 { padding: 4rem 1.5rem; }
+      .install-banner__copy span { display: none; }
+      body.has-install-banner .site-header { top: 5.6rem; }
+      .footer-download { justify-content: center; text-align: center; }
+      .footer-download__info p { margin-left: auto; margin-right: auto; }
+      .footer-download__badges { justify-content: center; }
     }
 </style>
 </head>
-<body>
+<body class="has-install-banner">
+  <div class="install-banner" id="installBanner" role="region" aria-label="Install Carryoo">
+    <div class="install-banner__inner">
+      <div class="install-banner__left">
+        <img class="install-banner__icon" src="assets/app-icon.svg" alt="" width="40" height="40">
+        <div class="install-banner__copy">
+          <strong>Install Carryoo</strong>
+          <span>for efficient goods transportation</span>
+        </div>
+      </div>
+      <div class="install-banner__actions">
+        <button type="button" class="btn-open-app js-open-app">OPEN APP</button>
+        <button type="button" class="install-banner__close" id="closeInstallBanner" aria-label="Dismiss install banner">&times;</button>
+      </div>
+    </div>
+  </div>
+
   <header class="site-header">
-    <h1>Carryoo</h1>
-    <p>Privacy Policy</p>
-    <p class="dates">Last updated: 29 May 2026 · Effective: 29 May 2026</p>
-    <p class="nav"><a href="#account-deletion">Account &amp; data deletion (Google Play)</a></p>
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Carryoo
+      </a>
+      <ul class="nav-links">
+        <li><a href="enterprise.html">For Enterprise</a></li>
+        <li><a href="driver-partner.html">Driver Partner</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="index.html" class="active">Privacy Policy</a></li>
+      </ul>
+    </div>
   </header>
-  <main>
-    <article lang="en">
-<h1>Privacy Policy</h1>
-<p><strong>Last updated:</strong> 29 May 2026<br />
-<strong>Effective date:</strong> 29 May 2026</p>
-<hr />
-<h2>1. Introduction</h2>
+
+  <div class="page-shell">
+    <div class="hero-banner">
+      <h1>Privacy Policy</h1>
+    </div>
+
+    <div class="main-wrap">
+      <article class="policy-card legal-body" lang="en">
+        <p class="content-title">Privacy Policy</p>
+        <p class="meta-line">Last updated: 29 May 2026 &nbsp;|&nbsp; Effective: 29 May 2026</p>
+        <nav class="jump-bar" aria-label="Quick section links"><a href="#introduction">Introduction</a><a href="#account-deletion">Account deletion</a><a href="#personal-data-we-collect">What we collect</a><a href="#how-we-use-your-personal-data">How we use data</a><a href="#how-we-share-personal-data">Sharing & disclosure</a><a href="#your-rights-and-choices">Your rights</a><a href="#grievance-officer-and-contact">Grievance Officer</a><a href="#cookies-and-similar-technologies-web">Cookies</a></nav>
+<h2 id="introduction" class="section-title">1. Introduction</h2>
 <p>This Privacy Policy (“<strong>Policy</strong>”) describes how <strong>Carryoo</strong> (“<strong>we</strong>”, “<strong>us</strong>”, “<strong>our</strong>”) collects, uses, stores, shares, and protects personal data when you use our logistics and on-demand delivery platform, including:</p>
 <ul>
 <li>Customer mobile and web applications  </li>
@@ -140,15 +721,15 @@
 <p>(collectively, the “<strong>Platform</strong>” or “<strong>Services</strong>”).</p>
 <p>Carryoo operates a technology platform that connects customers who need goods transported with independent driver partners and, where applicable, business accounts. We are committed to handling your information responsibly and in line with applicable laws, including the <strong>Digital Personal Data Protection Act, 2023 (India)</strong> (“<strong>DPDP Act</strong>”), the <strong>Information Technology Act, 2000</strong>, and rules made thereunder.</p>
 <p>By registering for, accessing, or using the Platform, you acknowledge that you have read and understood this Policy. If you do not agree, please do not use the Services.</p>
-<blockquote>
+<div class="info-box">
 <p><strong>Note for legal review:</strong> Replace bracketed placeholders such as <code>[Legal Entity Name]</code>, <code>[Registered Address]</code>, and <code>[Grievance Officer Name]</code> with your company’s official details before publication.</p>
-</blockquote>
+</div>
 <hr />
-<section class="deletion-highlight" id="account-deletion"><h2>2. Account and data deletion (Carryoo)</h2>
+<section class="deletion-highlight" id="account-deletion"><h2 id="account-and-data-deletion-carryoo" class="section-title">2. Account and data deletion (Carryoo)</h2>
 <p>This section applies to the <strong>Carryoo</strong> mobile apps listed on <strong>Google Play</strong> (customer app and driver partner app) and to our developer account <strong>Carryoo</strong> / <strong>[Legal Entity Name]</strong>. It explains how you can request deletion of your account and what happens to your data.</p>
-<h3>2.1 How to request account deletion</h3>
+<h3 class="subsection-title">2.1 How to request account deletion</h3>
 <p>Follow these steps to ask us to delete your Carryoo account:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Step</th>
@@ -181,12 +762,12 @@
 <td>After verification, we process deletion within <strong>30 days</strong>, unless law requires us to keep certain records longer (see Section 2.2).</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p><strong>In-app option (when available):</strong> Open the Carryoo app → <strong>Account</strong> or <strong>Profile</strong> → <strong>Settings</strong> → <strong>Delete account</strong>, and follow the prompts. If you do not see this option, use the email steps above.</p>
 <p><strong>Business / enterprise users:</strong> Contact <strong><a href="mailto:business@nashikflow.app">business@nashikflow.app</a></strong> from your corporate admin email; your organisation’s administrator may need to remove you from the business account first.</p>
-<h3>2.2 Data that is deleted</h3>
+<h3 class="subsection-title">2.2 Data that is deleted</h3>
 <p>After a valid deletion request, we delete or anonymise the following from our <strong>active production systems</strong> (subject to the retention periods in Section 2.3):</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Data category</th>
@@ -223,10 +804,10 @@
 <td>Account closed after settlement of any balance per our terms</td>
 </tr>
 </tbody>
-</table>
-<h3>2.3 Data that may be kept (and why)</h3>
+</table></div>
+<h3 class="subsection-title">2.3 Data that may be kept (and why)</h3>
 <p>We <strong>do not delete</strong> all records immediately. The following may be <strong>retained</strong> for the periods below for <strong>legal, tax, safety, fraud prevention, or dispute</strong> reasons:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Data category</th>
@@ -271,9 +852,9 @@
 <td>Technical disaster recovery</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>After the retention period ends, we <strong>delete or irreversibly anonymise</strong> the data in line with our retention schedule (see also Section 9).</p>
-<h3>2.4 Additional retention period</h3>
+<h3 class="subsection-title">2.4 Additional retention period</h3>
 <p>Beyond the periods in Section 2.3, we may keep personal data <strong>longer</strong> if:</p>
 <ul>
 <li>A <strong>court order</strong>, <strong>regulator</strong>, or <strong>law enforcement</strong> request requires it  </li>
@@ -281,12 +862,12 @@
 <li><strong>Indian law</strong> (including the DPDP Act and IT Act) mandates a specific retention period  </li>
 </ul>
 <p>We will inform you in our response to your deletion request if any of these exceptions apply to your case.</p>
-<h3>2.5 Questions about deletion</h3>
+<h3 class="subsection-title">2.5 Questions about deletion</h3>
 <p>Email <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> or see <strong>Section 12</strong> (Grievance Officer) for privacy complaints.</p>
 <hr />
-</section><h2>3. Who This Policy Applies To</h2>
+</section><h2 id="who-this-policy-applies-to" class="section-title">3. Who This Policy Applies To</h2>
 <p>This Policy applies to personal data we process about:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>User type</th>
@@ -315,12 +896,12 @@
 <td>Referral contacts, emergency contacts, or recipients whose details you provide when placing an order.</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
-<h2>4. Personal Data We Collect</h2>
+<h2 id="personal-data-we-collect" class="section-title">4. Personal Data We Collect</h2>
 <p>We collect personal data that you provide directly, that is generated through your use of the Services, and that we receive from third parties where permitted by law.</p>
-<h3>4.1 Data You Provide</h3>
-<table>
+<h3 class="subsection-title">4.1 Data You Provide</h3>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -375,9 +956,9 @@
 <td>Customers, drivers</td>
 </tr>
 </tbody>
-</table>
-<h3>4.2 Data Collected Automatically</h3>
-<table>
+</table></div>
+<h3 class="subsection-title">4.2 Data Collected Automatically</h3>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -407,8 +988,8 @@
 <td>Authentication, analytics</td>
 </tr>
 </tbody>
-</table>
-<h3>4.3 Data from Third Parties</h3>
+</table></div>
+<h3 class="subsection-title">4.3 Data from Third Parties</h3>
 <p>We may receive information from:</p>
 <ul>
 <li><strong>Payment gateways and banks</strong> — payment status, masked card or UPI references, chargeback data  </li>
@@ -420,9 +1001,9 @@
 </ul>
 <p>We do not intentionally collect sensitive personal data beyond what is necessary for lawful purposes (e.g., financial or identity verification for partners). Where required, we seek explicit consent.</p>
 <hr />
-<h2>5. How We Use Your Personal Data</h2>
+<h2 id="how-we-use-your-personal-data" class="section-title">5. How We Use Your Personal Data</h2>
 <p>We use personal data for the following purposes. Where the DPDP Act requires a lawful ground, we rely on <strong>your consent</strong>, <strong>performance of a contract</strong>, <strong>legal obligation</strong>, or <strong>legitimate uses</strong> permitted under applicable law (such as fraud prevention or network security).</p>
-<h3>5.1 Core Service Delivery</h3>
+<h3 class="subsection-title">5.1 Core Service Delivery</h3>
 <ul>
 <li><strong>Account creation and authentication</strong> — registering you, verifying your phone or email, and securing your account  </li>
 <li><strong>Order matching and dispatch</strong> — connecting customers with available driver partners based on location, vehicle type, and demand  </li>
@@ -431,7 +1012,7 @@
 <li><strong>Payments and settlements</strong> — processing customer payments, driver payouts, refunds, invoices, and wallet operations  </li>
 <li><strong>Real-time tracking</strong> — showing live location of vehicles during active trips to relevant parties  </li>
 </ul>
-<h3>5.2 Safety, Trust, and Compliance</h3>
+<h3 class="subsection-title">5.2 Safety, Trust, and Compliance</h3>
 <ul>
 <li>Verifying driver identity, licences, and vehicle documents  </li>
 <li>Detecting fraud, abuse, duplicate accounts, and policy violations  </li>
@@ -439,28 +1020,28 @@
 <li>Complying with tax, accounting, transport, and regulatory requirements  </li>
 <li>Responding to lawful requests from courts, police, or government authorities  </li>
 </ul>
-<h3>5.3 Customer Support and Communications</h3>
+<h3 class="subsection-title">5.3 Customer Support and Communications</h3>
 <ul>
 <li>Resolving complaints, lost-item reports, and billing queries  </li>
 <li>Sending transactional messages (OTP, booking confirmation, driver assigned, delivery completed)  </li>
 <li>Sending service announcements, policy updates, and—where you have opted in—marketing offers  </li>
 </ul>
-<h3>5.4 Product Improvement and Analytics</h3>
+<h3 class="subsection-title">5.4 Product Improvement and Analytics</h3>
 <ul>
 <li>Analysing aggregated usage patterns to improve matching algorithms, pricing, and user experience  </li>
 <li>Conducting surveys and A/B tests  </li>
 <li>Debugging errors and monitoring app performance  </li>
 </ul>
-<h3>5.5 Business and Enterprise Features</h3>
+<h3 class="subsection-title">5.5 Business and Enterprise Features</h3>
 <ul>
 <li>Managing corporate accounts, central billing, usage reports, and authorised sub-users  </li>
 <li>Enforcing business-specific pricing, credit limits, and service-level terms  </li>
 </ul>
 <p>We will not use your personal data for purposes incompatible with those described above without notifying you and, where required, obtaining fresh consent.</p>
 <hr />
-<h2>6. Location Data — Specific Notice</h2>
+<h2 id="location-data--specific-notice" class="section-title">6. Location Data — Specific Notice</h2>
 <p>Location information is essential for a logistics platform like Carryoo.</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>When</th>
@@ -485,14 +1066,14 @@
 <td>—</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>You can control location permissions through your device settings. Disabling location may prevent you from booking rides, going online as a driver, or receiving accurate ETAs.</p>
 <p>We retain trip route data only as long as needed for operations, disputes, safety investigations, and legal retention periods (see Section 9 and Section 2.3).</p>
 <hr />
-<h2>7. How We Share Personal Data</h2>
+<h2 id="how-we-share-personal-data" class="section-title">7. How We Share Personal Data</h2>
 <p>We do not sell your personal data. We share it only as described below.</p>
-<h3>7.1 Between Platform Users (Service-Necessary Sharing)</h3>
-<table>
+<h3 class="subsection-title">7.1 Between Platform Users (Service-Necessary Sharing)</h3>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Shared with</th>
@@ -517,10 +1098,10 @@
 <td>Enterprise reporting</td>
 </tr>
 </tbody>
-</table>
-<h3>7.2 Service Providers and Processors</h3>
+</table></div>
+<h3 class="subsection-title">7.2 Service Providers and Processors</h3>
 <p>We engage trusted third parties who process data on our instructions, including:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Category</th>
@@ -557,11 +1138,11 @@
 <td>Ticketing and chat platforms</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>These parties are contractually required to protect your data and use it only for the services they provide to us.</p>
-<h3>7.3 Business Partners and Affiliates</h3>
+<h3 class="subsection-title">7.3 Business Partners and Affiliates</h3>
 <p>Where you use Carryoo Business or promotional programmes, we may share limited data with the corporate account owner or programme partners as disclosed at sign-up.</p>
-<h3>7.4 Legal and Safety Disclosures</h3>
+<h3 class="subsection-title">7.4 Legal and Safety Disclosures</h3>
 <p>We may disclose personal data when we believe in good faith that disclosure is necessary to:</p>
 <ul>
 <li>Comply with applicable law, regulation, legal process, or governmental request  </li>
@@ -569,17 +1150,17 @@
 <li>Protect the rights, property, or safety of Carryoo, our users, or the public  </li>
 <li>Detect, prevent, or address fraud, security, or technical issues  </li>
 </ul>
-<h3>7.5 Business Transfers</h3>
+<h3 class="subsection-title">7.5 Business Transfers</h3>
 <p>If we are involved in a merger, acquisition, or sale of assets, your personal data may be transferred as part of that transaction, subject to confidentiality and continued protection consistent with this Policy.</p>
-<h3>7.6 Aggregated and De-Identified Data</h3>
+<h3 class="subsection-title">7.6 Aggregated and De-Identified Data</h3>
 <p>We may share statistics that do not identify individuals (e.g., average delivery times in our service areas) for research, marketing, or industry reports.</p>
 <hr />
-<h2>8. International Data Transfers</h2>
+<h2 id="international-data-transfers" class="section-title">8. International Data Transfers</h2>
 <p>Our primary systems are located in India. Some service providers may process data on servers outside India. Where personal data is transferred internationally, we implement appropriate safeguards as required under the DPDP Act and applicable rules, such as contractual clauses and assessments of recipient jurisdictions.</p>
 <hr />
-<h2>9. Data Retention</h2>
+<h2 id="data-retention" class="section-title">9. Data Retention</h2>
 <p>We retain personal data only for as long as necessary to fulfil the purposes in this Policy, unless a longer period is required or permitted by law.</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Data type</th>
@@ -612,10 +1193,10 @@
 <td>As required by law and partner onboarding rules</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>When retention ends, we delete or irreversibly anonymise data in accordance with our data retention schedule.</p>
 <hr />
-<h2>10. Security Measures</h2>
+<h2 id="security-measures" class="section-title">10. Security Measures</h2>
 <p>We implement administrative, technical, and organisational measures designed to protect personal data, including:</p>
 <ul>
 <li>Encryption in transit (TLS/HTTPS) and encryption at rest where appropriate  </li>
@@ -626,9 +1207,9 @@
 </ul>
 <p>No method of transmission or storage is completely secure. You are responsible for safeguarding your device, OTPs, and account credentials. Report suspected unauthorised access immediately to <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong>.</p>
 <hr />
-<h2>11. Your Rights and Choices</h2>
+<h2 id="your-rights-and-choices" class="section-title">11. Your Rights and Choices</h2>
 <p>Under the DPDP Act and our practices, you may have the following rights in relation to your personal data (subject to applicable exceptions):</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Right</th>
@@ -668,18 +1249,18 @@
 <td>Contact support with required documentation</td>
 </tr>
 </tbody>
-</table>
-<h3>11.1 Account deletion</h3>
+</table></div>
+<h3 class="subsection-title">11.1 Account deletion</h3>
 <p>For full steps, data deleted or kept, and retention periods required by Google Play, see <strong>Section 2 (Account and data deletion)</strong> above.</p>
 <p>You may also request deletion by emailing <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> from your registered email or phone. We will verify your identity before processing.</p>
-<h3>11.2 Marketing Opt-Out</h3>
+<h3 class="subsection-title">11.2 Marketing Opt-Out</h3>
 <p>You may opt out of promotional SMS, email, or push notifications via message instructions or app settings. Transactional messages related to active bookings cannot be fully opted out while you use the Services.</p>
-<h3>11.3 Driver Partners</h3>
+<h3 class="subsection-title">11.3 Driver Partners</h3>
 <p>Drivers who wish to stop processing must go offline, close their partner account, and settle outstanding payouts. Certain records (trips, tax, KYC) may still be retained as required by law.</p>
 <hr />
-<h2>12. Grievance Officer and Contact</h2>
+<h2 id="grievance-officer-and-contact" class="section-title">12. Grievance Officer and Contact</h2>
 <p>In accordance with applicable Indian law, you may contact our Grievance Officer for privacy-related complaints:</p>
-<table>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th></th>
@@ -712,10 +1293,10 @@
 <td>We aim to acknowledge complaints within 24–48 hours and resolve them within 30 days, or as prescribed by law</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>If you are not satisfied with our response, you may have the right to approach the <strong>Data Protection Board of India</strong> under the DPDP Act once fully operational.</p>
 <hr />
-<h2>13. Cookies and Similar Technologies (Web)</h2>
+<h2 id="cookies-and-similar-technologies-web" class="section-title">13. Cookies and Similar Technologies (Web)</h2>
 <p>When you use our website or web-based admin tools, we and our partners may use cookies, pixels, and local storage to:</p>
 <ul>
 <li>Keep you signed in  </li>
@@ -724,17 +1305,17 @@
 </ul>
 <p>You can control cookies through your browser settings. Disabling essential cookies may affect functionality.</p>
 <hr />
-<h2>14. Children’s Privacy</h2>
+<h2 id="childrens-privacy" class="section-title">14. Children’s Privacy</h2>
 <p>The Platform is not intended for individuals under <strong>18 years</strong> of age. We do not knowingly collect personal data from children. If you believe a child has provided us data, contact <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong> and we will take steps to delete it.</p>
 <hr />
-<h2>15. Third-Party Links and SDKs</h2>
+<h2 id="third-party-links-and-sdks" class="section-title">15. Third-Party Links and SDKs</h2>
 <p>The Platform may contain links to third-party websites or integrate third-party SDKs (maps, payments, analytics). Their privacy practices are governed by their own policies. We encourage you to review those policies before providing them information.</p>
 <hr />
-<h2>16. Changes to This Policy</h2>
+<h2 id="changes-to-this-policy" class="section-title">16. Changes to This Policy</h2>
 <p>We may update this Policy from time to time to reflect changes in law, technology, or our Services. We will post the revised Policy with an updated “Last updated” date and, where required, notify you through the app, email, or SMS. Continued use after the effective date constitutes acceptance of the revised Policy, to the extent permitted by law.</p>
 <hr />
-<h2>17. Definitions</h2>
-<table>
+<h2 id="definitions" class="section-title">17. Definitions</h2>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Term</th>
@@ -759,10 +1340,10 @@
 <td>Carryoo, which determines the purpose and means of processing</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
-<h2>18. Summary Table — Data Uses at a Glance</h2>
-<table>
+<h2 id="summary-table--data-uses-at-a-glance" class="section-title">18. Summary Table — Data Uses at a Glance</h2>
+<div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Purpose</th>
@@ -812,15 +1393,152 @@
 <td>Legal obligation</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <hr />
 <p><strong>© [Legal Entity Name]. All rights reserved.</strong></p>
 <p>For questions about this Policy: <strong><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></strong></p>
-    </article>
-  </main>
+
+        <aside class="download-card" aria-label="Install Carryoo app">
+          <div>
+            <h3>We are better on the app! <span class="demo-badge">Demo</span></h3>
+            <p>Install Carryoo for faster bookings, live trip tracking, and driver partner tools. Play Store listing coming soon — this is a demo prompt for now.</p>
+          </div>
+          <button type="button" class="btn-open-app js-open-app">Install Carryoo</button>
+        </aside>
+
+      </article>
+    </div>
+  </div>
+
   <footer class="site-footer">
-    <p>&copy; Carryoo. Static privacy policy for Google Play Store.</p>
-    <p><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></p>
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Carryoo
+      </a>
+
+      <div class="footer-download">
+        <div class="footer-download__info">
+          <h4>Download our app</h4>
+          <p>Scan the demo QR or tap a store button. Play Store / App Store links will go live when Carryoo is published — this is a demo for now.</p>
+          <div class="footer-download__badges">
+            <button type="button" class="store-badge js-open-app" aria-label="Get it on Google Play (demo)">
+              <span class="store-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+              </span>
+              <span class="store-badge__text">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </button>
+            <button type="button" class="store-badge js-open-app" aria-label="Download on the App Store (demo)">
+              <span class="store-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.3c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.2 0 1.9-1 2.6-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.2-.8-2.2-3.7zm-2-6.2c.6-.7 1-1.7.9-2.7-1 .1-2.1.6-2.7 1.4-.6.7-1.1 1.7-.9 2.7 1 0 2-.6 2.7-1.4z"/></svg>
+              </span>
+              <span class="store-badge__text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="footer-download__qr">
+          <img src="assets/qr-demo.svg" alt="Demo QR code to download Carryoo" width="146" height="146">
+          <span>Scan to download</span>
+          <span class="demo-pill">Demo QR</span>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Carryoo</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="enterprise.html#vehicles">Two Wheelers</a></li>
+            <li><a href="enterprise.html#vehicles">Trucks</a></li>
+            <li><a href="enterprise.html">Carryoo Business</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="mailto:support@nashikflow.app">Contact Us</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="#account-deletion">Account Deletion</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></li>
+            <li><a href="mailto:business@nashikflow.app">business@nashikflow.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <h5>Registered Office:</h5>
+        <p>&copy; 2026 Carryoo / [Legal Entity Name]. [Registered Office Address, Nashik, Maharashtra, India]</p>
+        <p>Email: <a href="mailto:support@nashikflow.app">support@nashikflow.app</a></p>
+        <p>Privacy policy for Google Play Store and web.</p>
+      </div>
+    </div>
   </footer>
+
+  <div class="demo-modal" id="demoModal" aria-hidden="true">
+    <div class="demo-modal__backdrop" data-close-modal></div>
+    <div class="demo-modal__panel" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <img src="assets/app-icon.svg" alt="" width="64" height="64">
+      <h3 id="demoModalTitle">Carryoo app — coming soon</h3>
+      <p>This is a demo install prompt. The Carryoo app is not on the Play Store yet. Leave your email with support and we will notify you when downloads go live.</p>
+      <div class="demo-modal__actions">
+        <a class="btn-open-app" href="mailto:support@nashikflow.app?subject=Notify%20me%20when%20Carryoo%20app%20launches">Notify me</a>
+        <button type="button" class="btn-secondary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var banner = document.getElementById("installBanner");
+      var closeBtn = document.getElementById("closeInstallBanner");
+      var modal = document.getElementById("demoModal");
+      if (sessionStorage.getItem("carryooInstallBannerDismissed") === "1" && banner) {
+        banner.hidden = true;
+        document.body.classList.remove("has-install-banner");
+      }
+      if (closeBtn && banner) {
+        closeBtn.addEventListener("click", function () {
+          banner.hidden = true;
+          document.body.classList.remove("has-install-banner");
+          sessionStorage.setItem("carryooInstallBannerDismissed", "1");
+        });
+      }
+      function openModal() {
+        if (!modal) return;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+      }
+      document.querySelectorAll(".js-open-app").forEach(function (btn) {
+        btn.addEventListener("click", openModal);
+      });
+      document.querySelectorAll("[data-close-modal]").forEach(function (el) {
+        el.addEventListener("click", closeModal);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+      });
+    })();
+  </script>
 </body>
 </html>

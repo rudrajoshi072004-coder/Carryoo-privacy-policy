@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" fill="none" role="img" aria-label="Carryoo fleet vehicles">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1A4A"/>
+      <stop offset="100%" stop-color="#0A57FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="320" rx="24" fill="url(#g)"/>
+  <circle cx="420" cy="60" r="80" fill="#00C2A8" opacity=".15"/>
+  <circle cx="80" cy="260" r="60" fill="#fff" opacity=".06"/>
+  <!-- mini truck -->
+  <g transform="translate(40,90)">
+    <ellipse cx="150" cy="150" rx="140" ry="12" fill="#000" opacity=".25"/>
+    <circle cx="70" cy="130" r="22" fill="#0F172A"/>
+    <circle cx="70" cy="130" r="10" fill="#94A3B8"/>
+    <circle cx="210" cy="130" r="22" fill="#0F172A"/>
+    <circle cx="210" cy="130" r="10" fill="#94A3B8"/>
+    <rect x="20" y="55" width="140" height="65" rx="6" fill="#fff"/>
+    <rect x="30" y="65" width="120" height="10" rx="2" fill="#BFDBFE"/>
+    <text x="90" y="105" text-anchor="middle" fill="#0A57FF" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">Carryoo</text>
+    <path d="M160 65h50c10 0 18 8 18 18v37H160z" fill="#00C2A8"/>
+    <path d="M172 74h30c6 0 10 4 10 10v16H172z" fill="#E0F2FE"/>
+  </g>
+  <!-- two wheeler smaller -->
+  <g transform="translate(300,140) scale(.85)">
+    <circle cx="50" cy="90" r="18" fill="#0F172A"/>
+    <circle cx="50" cy="90" r="8" fill="#94A3B8"/>
+    <circle cx="150" cy="90" r="18" fill="#0F172A"/>
+    <circle cx="150" cy="90" r="8" fill="#94A3B8"/>
+    <rect x="30" y="40" width="55" height="40" rx="5" fill="#fff"/>
+    <text x="57" y="66" text-anchor="middle" fill="#0A57FF" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700">C</text>
+    <path d="M85 70h40l12-18h16l6 14v24H85z" fill="#00C2A8"/>
+  </g>
+</svg>

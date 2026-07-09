@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Carryoo as a Driver Partner. Attach your two-wheeler, tempo, or mini truck and start earning with regular trips.">
+  <meta name="robots" content="index, follow">
+  <title>Driver Partner | Carryoo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef3ff;
+      --ink: #040a1a;
+      --text: #334155;
+      --muted: #64748b;
+      --accent: #0a57ff;
+      --accent-deep: #0846d6;
+      --teal: #00c2a8;
+      --navy: #040a1a;
+      --panel: #e8efff;
+      --panel-2: #d6e4ff;
+      --cream: #f8faff;
+      --footer-bg: #0b1220;
+      --footer-muted: #94a3b8;
+      --line: #c7d7ff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-size: 62.5%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .brand, .section-title {
+      font-family: "Space Grotesk", "DM Sans", sans-serif;
+    }
+    a { color: var(--accent-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    button { font-family: inherit; }
+
+    /* Slim top install strip — brand blue */
+    .install-banner {
+      background: linear-gradient(90deg, #040a1a 0%, #0a1a4a 55%, #0a57ff 100%);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 120;
+    }
+    .install-banner__inner {
+      max-width: 112rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .install-banner__left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .install-banner__icon {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 0.8rem;
+      border: 2px solid rgba(255,255,255,0.35);
+    }
+    .install-banner__copy strong {
+      display: block;
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+    .install-banner__copy span {
+      display: block;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .install-banner__actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .btn-open-app {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.85rem 1.8rem;
+      font-size: 1.35rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-open-app:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
+    .install-banner__close {
+      background: transparent;
+      border: none;
+      color: rgba(255,255,255,0.85);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.2rem 0.5rem;
+    }
+    .install-banner[hidden] { display: none !important; }
+    body.has-install-banner .site-header { top: 5.4rem; }
+
+    /* Header — sand bar, underline nav */
+    .site-header {
+      background: var(--cream);
+      border-bottom: 2px solid var(--line);
+      padding: 1.4rem 3.2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-header__inner {
+      max-width: 112rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+    }
+    .brand:hover { text-decoration: none; }
+    .brand-mark {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 0.4rem;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--text);
+      font-size: 1.45rem;
+      font-weight: 600;
+      padding-bottom: 0.2rem;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--accent-deep);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Hero — full-bleed charcoal + diagonal accent */
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 5.5rem 3.2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: -10%;
+      top: -20%;
+      width: 50%;
+      height: 140%;
+      background: linear-gradient(160deg, rgba(10, 87, 255, 0.35), transparent 60%);
+      transform: skewX(-12deg);
+      pointer-events: none;
+    }
+    .hero__inner {
+      max-width: 112rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .hero-top {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: end;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent);
+      margin-bottom: 1.6rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 0.3rem;
+    }
+    .hero h1 {
+      margin: 0 0 1.4rem;
+      font-size: clamp(3.4rem, 6vw, 5.6rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: #fff;
+      max-width: 18ch;
+    }
+    .hero-lead {
+      margin: 0 0 2.4rem;
+      font-size: 1.7rem;
+      color: #cbd5e1;
+      max-width: 48rem;
+      line-height: 1.6;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 1.25rem 2.6rem;
+      font-size: 1.55rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-deep); color: #fff; text-decoration: none; }
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      border-radius: 999px;
+      padding: 1.2rem 2.4rem;
+      font-size: 1.55rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: #fff; color: #fff; text-decoration: none; }
+    .hero-visual {
+      background: var(--panel);
+      border-radius: 1.6rem 1.6rem 0 0;
+      padding: 2rem 2rem 0;
+      border: 2px solid var(--panel-2);
+      border-bottom: none;
+    }
+    .hero-visual img {
+      width: 100%;
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 3.2rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stats div {
+      padding: 2rem 1.6rem;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-stats div:last-child { border-right: none; }
+    .hero-stats strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2.4rem;
+      color: var(--teal);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .hero-stats span {
+      font-size: 1.3rem;
+      color: var(--footer-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .section {
+      max-width: 112rem;
+      margin: 0 auto;
+      padding: 6rem 3.2rem;
+    }
+    .section-label {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin: 0 0 1rem;
+    }
+    .section-title {
+      margin: 0 0 1.2rem;
+      font-size: clamp(2.6rem, 4vw, 3.6rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+    .section-desc {
+      margin: 0 0 3.2rem;
+      font-size: 1.6rem;
+      color: var(--muted);
+      max-width: 56rem;
+    }
+
+    /* Start earn — bold horizontal band */
+    .start-earn {
+      background: linear-gradient(90deg, #0a57ff, #00c2a8);
+      color: #fff;
+      padding: 2.4rem 3.2rem;
+    }
+    .start-earn__inner {
+      max-width: 112rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .start-earn h2 {
+      margin: 0 0 0.4rem;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .start-earn p {
+      margin: 0;
+      font-size: 1.45rem;
+      opacity: 0.92;
+      color: #fff;
+    }
+    .start-earn .btn-open-app {
+      background: #fff;
+      color: var(--accent-deep);
+      border-radius: 999px;
+    }
+    .start-earn .btn-open-app:hover {
+      background: #eef2ff;
+      color: var(--accent-deep);
+    }
+
+    /* Advantage — stacked horizontal rows, not 3 cards */
+    .advantage { background: var(--cream); }
+    .adv-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 2px solid var(--ink);
+    }
+    .adv-row {
+      display: grid;
+      grid-template-columns: 8rem 1fr 2fr;
+      gap: 2rem;
+      align-items: start;
+      padding: 2.8rem 0;
+      border-bottom: 2px solid var(--ink);
+    }
+    .adv-row .adv-num {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .adv-row h3 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .adv-row p {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Easy — cream panel + orange callout */
+    .easy { background: var(--bg); }
+    .easy-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 3.2rem;
+      align-items: stretch;
+    }
+    .easy-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .easy-list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.4rem;
+      margin-bottom: 1.4rem;
+      padding: 1.8rem;
+      background: var(--cream);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 1rem 1rem 0;
+    }
+    .easy-list strong {
+      display: block;
+      font-size: 1.55rem;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .easy-list span {
+      font-size: 1.4rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .easy-list .tick {
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 0.4rem;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    .easy-visual {
+      background: var(--accent);
+      border-radius: 0 2.4rem 0 2.4rem;
+      padding: 3.2rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 34rem;
+    }
+    .vehicle-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2.4rem;
+    }
+    .vehicle-pills span {
+      background: rgba(0,0,0,0.18);
+      border-radius: 999px;
+      padding: 0.55rem 1.2rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .easy-visual h3 {
+      margin: 0 0 1rem;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .easy-visual p {
+      margin: 0;
+      font-size: 1.5rem;
+      color: rgba(255,255,255,0.92);
+      line-height: 1.6;
+    }
+
+    /* Stories — dark band, quote marks */
+    .stories {
+      background: var(--navy);
+      color: #fff;
+    }
+    .stories .section-label { color: var(--teal); }
+    .stories .section-title { color: #fff; }
+    .stories .section-desc { color: var(--footer-muted); }
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+    }
+    .story-card {
+      background: #111827;
+      border-radius: 1.2rem;
+      padding: 2.4rem;
+      border-top: 4px solid var(--accent);
+    }
+    .story-card::before {
+      content: "“";
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 5rem;
+      line-height: 0.7;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .story-card p {
+      margin: 0 0 2rem;
+      font-size: 1.45rem;
+      line-height: 1.65;
+      color: #e2e8f0;
+      font-style: normal;
+    }
+    .story-meta strong {
+      display: block;
+      font-size: 1.45rem;
+      color: #93c5fd;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .story-meta span {
+      font-size: 1.25rem;
+      color: var(--footer-muted);
+    }
+
+    /* Fleet owner */
+    .fleet-owner { background: var(--panel); padding: 6rem 3.2rem; }
+    .fleet-box {
+      max-width: 112rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2.4rem;
+      align-items: center;
+      background: var(--cream);
+      border: 2px solid var(--ink);
+      border-radius: 0;
+      padding: 3.6rem;
+    }
+    .fleet-box h2 {
+      margin: 0 0 1.2rem;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+      text-transform: none;
+    }
+    .fleet-box p {
+      margin: 0 0 2.2rem;
+      font-size: 1.55rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .fleet-aside {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 1.2rem;
+      padding: 2.4rem;
+      text-align: left;
+    }
+    .fleet-aside strong {
+      display: block;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-family: "Space Grotesk", sans-serif;
+      color: #93c5fd;
+    }
+    .fleet-aside span {
+      font-size: 1.4rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .download-wrap { padding: 0 3.2rem 5rem; background: var(--panel); }
+    .download-card {
+      max-width: 112rem;
+      margin: 0 auto;
+      padding: 2.4rem 2.8rem;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .download-card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .download-card p {
+      margin: 0;
+      font-size: 1.35rem;
+      color: var(--footer-muted);
+    }
+    .download-card .btn-open-app {
+      background: var(--accent);
+      border-radius: 999px;
+    }
+    .download-card .btn-open-app:hover { background: var(--accent-deep); }
+    .demo-badge {
+      display: inline-block;
+      margin-left: 0.5rem;
+      padding: 0.15rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(0, 194, 168, 0.25);
+      color: var(--teal);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    /* FAQ */
+    .faq { background: var(--cream); }
+    .faq-list { max-width: 78rem; margin: 0 auto; }
+    details.faq-item {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--line);
+      border-radius: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 2rem 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.6rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: "+";
+      font-size: 2.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 400;
+    }
+    details.faq-item[open] summary::after { content: "−"; }
+    details.faq-item .faq-body {
+      padding: 0 0 2rem;
+      font-size: 1.5rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    details.faq-item .faq-body ol {
+      margin: 1rem 0 0;
+      padding-left: 2rem;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--footer-bg);
+      color: #fff;
+      padding: 4rem 3.2rem 2.4rem;
+    }
+    .footer-inner { max-width: 112rem; margin: 0 auto; }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 2.4rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .footer-brand:hover { text-decoration: none; color: #fff; }
+    .footer-download {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      margin: 0 0 3.2rem;
+      padding: 2.4rem;
+      background: #111827;
+      border-radius: 1.2rem;
+      border: 1px solid #1e293b;
+    }
+    .footer-download__info h4 {
+      margin: 0 0 0.6rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #93c5fd;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .footer-download__info p {
+      margin: 0 0 1.6rem;
+      font-size: 1.35rem;
+      color: var(--footer-muted);
+      max-width: 42rem;
+      line-height: 1.6;
+    }
+    .footer-download__badges { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: #000;
+      border: 1px solid #334155;
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.4rem;
+      color: #fff;
+      min-width: 15.5rem;
+      cursor: pointer;
+    }
+    .store-badge:hover { border-color: var(--teal); }
+    .store-badge__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.2;
+    }
+    .store-badge__text small { font-size: 1rem; opacity: 0.85; }
+    .store-badge__text strong { font-size: 1.45rem; font-weight: 700; }
+    .footer-download__qr { text-align: center; }
+    .footer-download__qr img {
+      width: 12.5rem;
+      height: 12.5rem;
+      background: #fff;
+      border-radius: 0.8rem;
+      padding: 0.6rem;
+      margin: 0 auto 0.8rem;
+    }
+    .footer-download__qr span {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--footer-muted);
+      font-weight: 600;
+    }
+    .footer-download__qr .demo-pill {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(10, 87, 255, 0.35);
+      color: #93c5fd;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-col h4 {
+      margin: 0 0 1.2rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; }
+    .footer-col li { margin-bottom: 0.8rem; }
+    .footer-col a { color: #e2e8f0; font-size: 1.4rem; text-decoration: none; }
+    .footer-col a:hover { color: var(--teal); }
+    .footer-legal {
+      border-top: 1px solid #1e293b;
+      padding-top: 2rem;
+      color: var(--footer-muted);
+      font-size: 1.3rem;
+      line-height: 1.7;
+    }
+    .footer-legal h5 {
+      margin: 0 0 0.8rem;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .footer-legal p { margin: 0 0 0.6rem; }
+    .footer-legal a { color: #93c5fd; }
+
+    .demo-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .demo-modal.is-open { display: flex; }
+    .demo-modal__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(4, 10, 26, 0.65);
+    }
+    .demo-modal__panel {
+      position: relative;
+      background: var(--cream);
+      border-radius: 1.2rem;
+      max-width: 42rem;
+      width: 100%;
+      padding: 2.8rem 2.4rem 2.4rem;
+      box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.3);
+      text-align: center;
+      border: 2px solid var(--ink);
+    }
+    .demo-modal__panel img {
+      width: 6.4rem;
+      height: 6.4rem;
+      margin: 0 auto 1.6rem;
+      border-radius: 1.2rem;
+    }
+    .demo-modal__panel h3 {
+      margin: 0 0 0.8rem;
+      font-size: 2rem;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .demo-modal__panel p {
+      margin: 0 0 2rem;
+      font-size: 1.45rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .demo-modal__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-secondary {
+      background: var(--panel);
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+      border-radius: 999px;
+      padding: 0.9rem 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .site-header { padding: 1.2rem 2rem; }
+      .hero, .section, .start-earn, .fleet-owner, .download-wrap { padding-left: 2rem; padding-right: 2rem; }
+      .hero-top, .easy-grid, .fleet-box { grid-template-columns: 1fr; }
+      .hero-visual { order: -1; border-radius: 1.2rem; border: 2px solid var(--panel-2); }
+      .adv-row { grid-template-columns: 6rem 1fr; }
+      .adv-row p { grid-column: 1 / -1; }
+      .story-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .hero-stats div { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.4rem; }
+      .download-card { border-radius: 1.6rem; }
+      .site-footer { padding: 3rem 2rem 2rem; }
+    }
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+      .install-banner__copy span { display: none; }
+      body.has-install-banner .site-header { top: 5rem; }
+      .footer-download { justify-content: center; text-align: center; }
+      .footer-download__badges { justify-content: center; }
+    }
+  </style>
+</head>
+<body class="has-install-banner">
+  <div class="install-banner" id="installBanner" role="region" aria-label="Install Carryoo">
+    <div class="install-banner__inner">
+      <div class="install-banner__left">
+        <img class="install-banner__icon" src="assets/app-icon.svg" alt="" width="40" height="40">
+        <div class="install-banner__copy">
+          <strong>Install Carryoo Partner</strong>
+          <span>earn with every trip</span>
+        </div>
+      </div>
+      <div class="install-banner__actions">
+        <button type="button" class="btn-open-app js-open-app">OPEN APP</button>
+        <button type="button" class="install-banner__close" id="closeInstallBanner" aria-label="Dismiss install banner">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Carryoo
+      </a>
+      <ul class="nav-links">
+        <li><a href="enterprise.html">For Enterprise</a></li>
+        <li><a href="driver-partner.html" class="active">Driver Partner</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="index.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero-top">
+        <div>
+          <div class="hero-tag">Driver Partner</div>
+          <h1>Attach trucks or bike!</h1>
+          <p class="hero-lead">Transport goods, earn big. Join as a part-time or full-time Carryoo Driver Partner and get steady trips across the city.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn-primary js-open-app">Get partner app</button>
+            <a class="btn-ghost" href="#how-to-join">How to join</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/vehicles/hero-fleet.svg" alt="Carryoo partner vehicles — trucks and two-wheelers" width="520" height="320">
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <strong>Part / Full</strong>
+          <span>Flexible hours</span>
+        </div>
+        <div>
+          <strong>0 fee</strong>
+          <span>To register</span>
+        </div>
+        <div>
+          <strong>On-time</strong>
+          <span>Partner payouts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="start-earn">
+    <div class="start-earn__inner">
+      <div>
+        <h2>Start earning immediately</h2>
+        <p>Download the partner app and register — demo flow until Play Store launch.</p>
+      </div>
+      <button type="button" class="btn-open-app js-open-app">Download partner app</button>
+    </div>
+  </div>
+
+  <section class="advantage section">
+    <p class="section-label">Carryoo advantage</p>
+    <h2 class="section-title">Why partners choose Carryoo</h2>
+    <p class="section-desc">Regular demand, clearer earnings, and on-time payouts — built for driver partners and fleet owners.</p>
+    <div class="adv-list">
+      <article class="adv-row">
+        <div class="adv-num">01</div>
+        <h3>Regular trips</h3>
+        <p>With growing demand across the city, you get a steady stream of goods transport trips — less idle time at the stand.</p>
+      </article>
+      <article class="adv-row">
+        <div class="adv-num">02</div>
+        <h3>Better earning</h3>
+        <p>Earn more with regular bookings, transparent fares, and incentives when you stay online and complete trips reliably.</p>
+      </article>
+      <article class="adv-row">
+        <div class="adv-num">03</div>
+        <h3>On-time payment</h3>
+        <p>Get payouts on schedule with in-app earning visibility and support when you need help with settlements.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="easy section">
+    <div class="easy-grid">
+      <div>
+        <p class="section-label">Making your life easy</p>
+        <h2 class="section-title">Attach your vehicle and go</h2>
+        <p class="section-desc">If you have a pickup, two-wheeler, or commercial vehicle, you are good to go.</p>
+        <ul class="easy-list">
+          <li>
+            <span class="tick" aria-hidden="true">✓</span>
+            <div>
+              <strong>No more waiting on the stand</strong>
+              <span>Get a steady stream of trips with less idle time and clearer demand through the app.</span>
+            </div>
+          </li>
+          <li>
+            <span class="tick" aria-hidden="true">✓</span>
+            <div>
+              <strong>No more bargaining — standard rates</strong>
+              <span>Fares and calculation methods are standardised and transparent for every trip.</span>
+            </div>
+          </li>
+          <li>
+            <span class="tick" aria-hidden="true">✓</span>
+            <div>
+              <strong>Hassle-free navigation</strong>
+              <span>Use GPS-based navigation assistance so you can move across the city with confidence.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="easy-visual">
+        <div class="vehicle-pills">
+          <span>Two wheelers</span>
+          <span>Three wheelers</span>
+          <span>Mini trucks</span>
+          <span>Pickups</span>
+        </div>
+        <h3>Your vehicle. Your schedule.</h3>
+        <p>Work part-time or full-time. Stay online when you want and accept trips that fit your vehicle type.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stories section">
+    <div style="max-width:112rem;margin:0 auto;padding:6rem 3.2rem;">
+      <p class="section-label">Stories</p>
+      <h2 class="section-title">Changing life of people</h2>
+      <p class="section-desc">Hear how driver partners grow earnings with transparent fares and regular city trips.</p>
+      <div class="story-grid">
+        <article class="story-card">
+          <p>Finding customers at the stand was tough. With Carryoo’s partner app and standard pricing, I spend less time waiting and more time on trips.</p>
+          <div class="story-meta">
+            <strong>Rahul</strong>
+            <span>Nashik · Mini truck partner</span>
+          </div>
+        </article>
+        <article class="story-card">
+          <p>Earlier I only got trips from known customers nearby. Now I get orders across the city and can track my daily earnings in the app.</p>
+          <div class="story-meta">
+            <strong>Suresh</strong>
+            <span>Nashik · Pickup partner</span>
+          </div>
+        </article>
+        <article class="story-card">
+          <p>I was new to the routes. In-app navigation helped a lot, and payouts come on time. Support resolves issues quickly.</p>
+          <div class="story-meta">
+            <strong>Amit</strong>
+            <span>Nashik · Two-wheeler partner</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="fleet-owner" id="fleet-owners">
+    <div class="fleet-box">
+      <div>
+        <h2>Own multiple vehicles?</h2>
+        <p>
+          If you are a fleet owner, keeping track of vehicles and utilisation can be hard.
+          Partner with Carryoo to boost earnings and manage your fleet more easily from one place.
+        </p>
+        <a class="btn-primary" href="mailto:business@nashikflow.app?subject=Carryoo%20fleet%20owner%20enquiry">Contact us</a>
+      </div>
+      <div class="fleet-aside">
+        <strong>Fleet owners welcome</strong>
+        <span>Email business@nashikflow.app<br>Tell us your vehicle count and city.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="download-wrap">
+    <aside class="download-card" aria-label="Install Carryoo partner app">
+      <div>
+        <h3>We are better on the app! <span class="demo-badge">Demo</span></h3>
+        <p>Install the Carryoo partner app to register, go online, and accept trips.</p>
+      </div>
+      <button type="button" class="btn-open-app js-open-app">Install partner app</button>
+    </aside>
+  </div>
+
+  <section class="faq section" id="how-to-join">
+    <p class="section-label">Help</p>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>How do I get a driver partner job at Carryoo?</summary>
+        <div class="faq-body">
+          Becoming a Carryoo partner is simple:
+          <ol>
+            <li>Download the Carryoo Partner app and register (demo until Play Store launch).</li>
+            <li>Submit your documents for verification.</li>
+            <li>Complete onboarding / a practice booking if required.</li>
+          </ol>
+          After verification, you can start receiving trips.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Is there any registration fee to join Carryoo?</summary>
+        <div class="faq-body">
+          No. There is no registration fee to join as a Carryoo Driver Partner. Download the app, register your documents, and complete verification.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Which vehicles can I attach?</summary>
+        <div class="faq-body">
+          You can attach two-wheelers (bike/scooter) and commercial vehicles such as three-wheelers, pickups, and mini trucks for on-demand goods transport — subject to city availability and document checks.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>How much can I earn?</summary>
+        <div class="faq-body">
+          Earnings depend on the time you stay online, trip volume, vehicle type, and incentives. Longer engagement usually means more trips and higher weekly earnings.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I work part-time?</summary>
+        <div class="faq-body">
+          Yes. You can work part-time or full-time and choose when to go online.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>How can I check earnings and payouts?</summary>
+        <div class="faq-body">
+          The partner app shows daily earnings and payout details so you can track what you made and when settlements are due.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I refer friends to join Carryoo?</summary>
+        <div class="faq-body">
+          Yes. Referral bonuses may be offered for successful onboarding of eligible vehicle types. Details will be shown in the partner app when the program is active.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>I have a query. How do I contact Carryoo?</summary>
+        <div class="faq-body">
+          Email <a href="mailto:support@nashikflow.app">support@nashikflow.app</a> for partner support, or
+          <a href="mailto:business@nashikflow.app">business@nashikflow.app</a> for fleet-owner enquiries.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        Carryoo
+      </a>
+
+      <div class="footer-download">
+        <div class="footer-download__info">
+          <h4>Download our app</h4>
+          <p>Scan the demo QR or tap a store button. Play Store / App Store links will go live when Carryoo is published — this is a demo for now.</p>
+          <div class="footer-download__badges">
+            <button type="button" class="store-badge js-open-app" aria-label="Get it on Google Play (demo)">
+              <span class="store-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+              </span>
+              <span class="store-badge__text">
+                <small>GET IT ON</small>
+                <strong>Google Play</strong>
+              </span>
+            </button>
+            <button type="button" class="store-badge js-open-app" aria-label="Download on the App Store (demo)">
+              <span class="store-badge__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.3c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.7-.7-2.8-.7-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.2 0 1.9-1 2.6-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.2-.8-2.2-3.7zm-2-6.2c.6-.7 1-1.7.9-2.7-1 .1-2.1.6-2.7 1.4-.6.7-1.1 1.7-.9 2.7 1 0 2-.6 2.7-1.4z"/></svg>
+              </span>
+              <span class="store-badge__text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="footer-download__qr">
+          <img src="assets/qr-demo.svg" alt="Demo QR code to download Carryoo" width="146" height="146">
+          <span>Scan to download</span>
+          <span class="demo-pill">Demo QR</span>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Carryoo</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="enterprise.html#vehicles">Two Wheelers</a></li>
+            <li><a href="enterprise.html#vehicles">Trucks</a></li>
+            <li><a href="enterprise.html">Carryoo Business</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="mailto:support@nashikflow.app">Contact Us</a></li>
+            <li><a href="index.html">Privacy Policy</a></li>
+            <li><a href="index.html#account-deletion">Account Deletion</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:support@nashikflow.app">support@nashikflow.app</a></li>
+            <li><a href="mailto:business@nashikflow.app">business@nashikflow.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <h5>Registered Office:</h5>
+        <p>&copy; 2026 Carryoo / [Legal Entity Name]. [Registered Office Address, Nashik, Maharashtra, India]</p>
+        <p>Email: <a href="mailto:support@nashikflow.app">support@nashikflow.app</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="demo-modal" id="demoModal" aria-hidden="true">
+    <div class="demo-modal__backdrop" data-close-modal></div>
+    <div class="demo-modal__panel" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <img src="assets/app-icon.svg" alt="" width="64" height="64">
+      <h3 id="demoModalTitle">Carryoo partner app — coming soon</h3>
+      <p>This is a demo install prompt. The partner app is not on the Play Store yet. Email support and we will notify you when downloads go live.</p>
+      <div class="demo-modal__actions">
+        <a class="btn-open-app" href="mailto:support@nashikflow.app?subject=Notify%20me%20when%20Carryoo%20partner%20app%20launches">Notify me</a>
+        <button type="button" class="btn-secondary" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var banner = document.getElementById("installBanner");
+      var closeBtn = document.getElementById("closeInstallBanner");
+      var modal = document.getElementById("demoModal");
+      if (sessionStorage.getItem("carryooInstallBannerDismissed") === "1" && banner) {
+        banner.hidden = true;
+        document.body.classList.remove("has-install-banner");
+      }
+      if (closeBtn && banner) {
+        closeBtn.addEventListener("click", function () {
+          banner.hidden = true;
+          document.body.classList.remove("has-install-banner");
+          sessionStorage.setItem("carryooInstallBannerDismissed", "1");
+        });
+      }
+      function openModal() {
+        if (!modal) return;
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+      }
+      document.querySelectorAll(".js-open-app").forEach(function (btn) {
+        btn.addEventListener("click", openModal);
+      });
+      document.querySelectorAll("[data-close-modal]").forEach(function (el) {
+        el.addEventListener("click", closeModal);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

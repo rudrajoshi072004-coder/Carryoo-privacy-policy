@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Demo QR code to download Carryoo app">
+  <rect width="160" height="160" rx="8" fill="#fff"/>
+  <!-- Finder patterns -->
+  <rect x="12" y="12" width="42" height="42" fill="#040A1A"/>
+  <rect x="18" y="18" width="30" height="30" fill="#fff"/>
+  <rect x="24" y="24" width="18" height="18" fill="#040A1A"/>
+  <rect x="106" y="12" width="42" height="42" fill="#040A1A"/>
+  <rect x="112" y="18" width="30" height="30" fill="#fff"/>
+  <rect x="118" y="24" width="18" height="18" fill="#040A1A"/>
+  <rect x="12" y="106" width="42" height="42" fill="#040A1A"/>
+  <rect x="18" y="112" width="30" height="30" fill="#fff"/>
+  <rect x="24" y="118" width="18" height="18" fill="#040A1A"/>
+  <!-- Demo data modules (stylized, not a real encode) -->
+  <g fill="#040A1A">
+    <rect x="64" y="16" width="8" height="8"/><rect x="76" y="16" width="8" height="8"/><rect x="88" y="16" width="8" height="8"/>
+    <rect x="64" y="28" width="8" height="8"/><rect x="88" y="28" width="8" height="8"/>
+    <rect x="64" y="40" width="8" height="8"/><rect x="76" y="40" width="8" height="8"/><rect x="88" y="40" width="8" height="8"/>
+    <rect x="16" y="64" width="8" height="8"/><rect x="28" y="64" width="8" height="8"/><rect x="40" y="64" width="8" height="8"/>
+    <rect x="64" y="64" width="8" height="8"/><rect x="76" y="64" width="8" height="8"/><rect x="88" y="64" width="8" height="8"/><rect x="100" y="64" width="8" height="8"/><rect x="112" y="64" width="8" height="8"/><rect x="136" y="64" width="8" height="8"/>
+    <rect x="16" y="76" width="8" height="8"/><rect x="40" y="76" width="8" height="8"/><rect x="64" y="76" width="8" height="8"/><rect x="88" y="76" width="8" height="8"/><rect x="112" y="76" width="8" height="8"/><rect x="124" y="76" width="8" height="8"/>
+    <rect x="16" y="88" width="8" height="8"/><rect x="28" y="88" width="8" height="8"/><rect x="40" y="88" width="8" height="8"/><rect x="64" y="88" width="8" height="8"/><rect x="76" y="88" width="8" height="8"/><rect x="100" y="88" width="8" height="8"/><rect x="136" y="88" width="8" height="8"/>
+    <rect x="64" y="100" width="8" height="8"/><rect x="88" y="100" width="8" height="8"/><rect x="112" y="100" width="8" height="8"/><rect x="124" y="100" width="8" height="8"/><rect x="136" y="100" width="8" height="8"/>
+    <rect x="64" y="112" width="8" height="8"/><rect x="76" y="112" width="8" height="8"/><rect x="100" y="112" width="8" height="8"/><rect x="124" y="112" width="8" height="8"/>
+    <rect x="64" y="124" width="8" height="8"/><rect x="88" y="124" width="8" height="8"/><rect x="100" y="124" width="8" height="8"/><rect x="136" y="124" width="8" height="8"/>
+    <rect x="64" y="136" width="8" height="8"/><rect x="76" y="136" width="8" height="8"/><rect x="88" y="136" width="8" height="8"/><rect x="112" y="136" width="8" height="8"/><rect x="124" y="136" width="8" height="8"/><rect x="136" y="136" width="8" height="8"/>
+  </g>
+  <!-- Center Carryoo mark -->
+  <rect x="68" y="68" width="24" height="24" rx="4" fill="#0A57FF"/>
+  <text x="80" y="85" text-anchor="middle" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800">C</text>
+</svg>
